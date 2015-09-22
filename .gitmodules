@@ -1,0 +1,3 @@
+[submodule "external/MathMatrixPack"]
+	path = external/MathMatrixPack
+	url = https://github.com/renatoorsino/MathMatrixPack.git

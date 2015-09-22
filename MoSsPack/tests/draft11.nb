@@ -1,0 +1,2218 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     74678,       2209]
+NotebookOptionsPosition[     73195,       2160]
+NotebookOutlinePosition[     73549,       2176]
+CellTagsIndexPosition[     73506,       2173]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  "\"\</Users/renatoorsino/PPGEM-USP/Packages/MathMatrixPack/\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6512162967690353`*^9, 3.65121630764156*^9}, {
+  3.6519164471188602`*^9, 3.6519164540747347`*^9}}],
+
+Cell[BoxData["\<\"/Users/renatoorsino/PPGEM-USP/Packages/MathMatrixPack\"\>"],\
+ "Output",
+ CellChangeTimes->{
+  3.651216308243787*^9, 3.651223081031225*^9, 3.651294792841488*^9, 
+   3.651386696122497*^9, 3.651472255031157*^9, 3.6514957521760902`*^9, 
+   3.65149590711742*^9, 3.6515566359476337`*^9, 3.651916455901841*^9, {
+   3.651916486464684*^9, 3.6519165111889753`*^9}, 3.6519166106805267`*^9, 
+   3.651916661220154*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"<<", "examples/examples01.m"}]], "Input",
+ CellChangeTimes->{{3.6512176517411013`*^9, 3.65121766191582*^9}, 
+   3.651230417896682*^9, 3.6512947872526207`*^9, {3.65130484515331*^9, 
+   3.651304868701045*^9}, 3.651312720133008*^9, {3.651916468816574*^9, 
+   3.6519164782722178`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["Ax", "2"], "+", 
+  SuperscriptBox["Ay", "2"], "+", 
+  SuperscriptBox["Az", "2"]}]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662183855*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Ax", " ", "Bx"}], "+", 
+  RowBox[{"Ay", " ", "By"}]}]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662192315*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Ax", " ", "Bx"}], "+", 
+  RowBox[{"Ay", " ", "By"}]}]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662202814*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"x\"\>",
+        HoldForm], 
+       TagBox["\<\"y\"\>",
+        HoldForm], 
+       TagBox["\<\"u\"\>",
+        HoldForm]},
+      {
+       TagBox["\<\"a\"\>",
+        HoldForm], "Aax", "Aay", "Aau"},
+      {
+       TagBox["\<\"b\"\>",
+        HoldForm], "Abx", "Aby", "Abu"},
+      {
+       TagBox["\<\"c\"\>",
+        HoldForm], "Acx", "Acy", "Acu"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, TableHeadings -> {{"a", "b", "c"}, {"x", "y", "u"}}, 
+    TableAlignments -> Left]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662214449*^9}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      TagBox["\<\"x\"\>",
+       HoldForm], "Ax"},
+     {
+      TagBox["\<\"y\"\>",
+       HoldForm], "Ay"},
+     {
+      TagBox["\<\"z\"\>",
+       HoldForm], "Az"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {False, {True}, False}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   OutputFormsDump`HeadedColumn],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, TableHeadings -> {{"x", "y", "z"}, None}, TableAlignments -> 
+    Center]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662226687*^9}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      TagBox["\<\"a\"\>",
+       HoldForm], 
+      RowBox[{
+       RowBox[{"Aax", " ", "Ax"}], "+", 
+       RowBox[{"Aay", " ", "Ay"}]}]},
+     {
+      TagBox["\<\"b\"\>",
+       HoldForm], 
+      RowBox[{
+       RowBox[{"Abx", " ", "Ax"}], "+", 
+       RowBox[{"Aby", " ", "Ay"}]}]},
+     {
+      TagBox["\<\"c\"\>",
+       HoldForm], 
+      RowBox[{
+       RowBox[{"Acx", " ", "Ax"}], "+", 
+       RowBox[{"Acy", " ", "Ay"}]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {False, {True}, False}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   OutputFormsDump`HeadedColumn],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, TableHeadings -> {{"a", "b", "c"}, None}, TableAlignments -> 
+    Left]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662238627*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"m\"\>",
+        HoldForm], 
+       TagBox["\<\"n\"\>",
+        HoldForm], 
+       TagBox["\<\"o\"\>",
+        HoldForm]},
+      {
+       TagBox["\<\"s\"\>",
+        HoldForm], "Bsm", "Bsn", "Bso"},
+      {
+       TagBox["\<\"x\"\>",
+        HoldForm], "Bxm", "Bxn", "Bxo"},
+      {
+       TagBox["\<\"y\"\>",
+        HoldForm], "Bym", "Byn", "Byo"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, TableHeadings -> {{"s", "x", "y"}, {"m", "n", "o"}}, 
+    TableAlignments -> Left]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662251093*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"m\"\>",
+        HoldForm], 
+       TagBox["\<\"n\"\>",
+        HoldForm], 
+       TagBox["\<\"o\"\>",
+        HoldForm]},
+      {
+       TagBox["\<\"a\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{"Aax", " ", "Bxm"}], "+", 
+        RowBox[{"Aay", " ", "Bym"}]}], 
+       RowBox[{
+        RowBox[{"Aax", " ", "Bxn"}], "+", 
+        RowBox[{"Aay", " ", "Byn"}]}], 
+       RowBox[{
+        RowBox[{"Aax", " ", "Bxo"}], "+", 
+        RowBox[{"Aay", " ", "Byo"}]}]},
+      {
+       TagBox["\<\"b\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{"Abx", " ", "Bxm"}], "+", 
+        RowBox[{"Aby", " ", "Bym"}]}], 
+       RowBox[{
+        RowBox[{"Abx", " ", "Bxn"}], "+", 
+        RowBox[{"Aby", " ", "Byn"}]}], 
+       RowBox[{
+        RowBox[{"Abx", " ", "Bxo"}], "+", 
+        RowBox[{"Aby", " ", "Byo"}]}]},
+      {
+       TagBox["\<\"c\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{"Acx", " ", "Bxm"}], "+", 
+        RowBox[{"Acy", " ", "Bym"}]}], 
+       RowBox[{
+        RowBox[{"Acx", " ", "Bxn"}], "+", 
+        RowBox[{"Acy", " ", "Byn"}]}], 
+       RowBox[{
+        RowBox[{"Acx", " ", "Bxo"}], "+", 
+        RowBox[{"Acy", " ", "Byo"}]}]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, TableHeadings -> {{"a", "b", "c"}, {"m", "n", "o"}}, 
+    TableAlignments -> Automatic]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.6519166622624807`*^9}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      TagBox["\<\"b\"\>",
+       HoldForm], 
+      RowBox[{"Ab", "+", "Bb", "+", "Cb"}]},
+     {
+      TagBox["\<\"d\"\>",
+       HoldForm], "Ad"},
+     {
+      TagBox["\<\"s\"\>",
+       HoldForm], "Cs"},
+     {
+      TagBox["\<\"w\"\>",
+       HoldForm], "Bw"},
+     {
+      TagBox["\<\"X\"\>",
+       HoldForm], 
+      RowBox[{"Ax", "+", "Bx"}]},
+     {
+      TagBox["a",
+       HoldForm], "Aa"},
+     {
+      TagBox["c",
+       HoldForm], 
+      RowBox[{"Ac", "+", "Bc"}]},
+     {
+      TagBox["y",
+       HoldForm], "By"},
+     {
+      TagBox["z",
+       HoldForm], "Az"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {False, {True}, False}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   OutputFormsDump`HeadedColumn],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, 
+    TableHeadings -> {{
+      "b", "d", "s", "w", 
+       "X", $CellContext`a, $CellContext`c, $CellContext`y, $CellContext`z}, 
+      None}, TableAlignments -> Left]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662273003*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"x\"\>",
+        HoldForm], 
+       TagBox["\<\"y\"\>",
+        HoldForm], 
+       TagBox["\<\"w\"\>",
+        HoldForm]},
+      {
+       TagBox["\<\"a\"\>",
+        HoldForm], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"a\"\>", ",", "\<\"x\"\>"}]], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]},
+      {
+       TagBox["\<\"b\"\>",
+        HoldForm], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"b\"\>", ",", "\<\"x\"\>"}]], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]]},
+      {
+       TagBox["\<\"c\"\>",
+        HoldForm], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"c\"\>", ",", "\<\"x\"\>"}]], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]},
+      {
+       TagBox["\<\"d\"\>",
+        HoldForm], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"d\"\>", ",", "\<\"x\"\>"}]], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, TableHeadings -> {{"a", "b", "c", "d"}, {"x", "y", "w"}}, 
+    TableAlignments -> Automatic]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662283511*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"z\"\>",
+        HoldForm], 
+       TagBox["\<\"w\"\>",
+        HoldForm], 
+       TagBox["\<\"y\"\>",
+        HoldForm], 
+       TagBox["\<\"q\"\>",
+        HoldForm]},
+      {
+       TagBox["\<\"a\"\>",
+        HoldForm], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"a\"\>", ",", "\<\"z\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"a\"\>", ",", "\<\"q\"\>"}]]},
+      {
+       TagBox["\<\"c\"\>",
+        HoldForm], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"c\"\>", ",", "\<\"z\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"c\"\>", ",", "\<\"q\"\>"}]]},
+      {
+       TagBox["\<\"r\"\>",
+        HoldForm], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"r\"\>", ",", "\<\"z\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"r\"\>", ",", "\<\"q\"\>"}]]},
+      {
+       TagBox["\<\"s\"\>",
+        HoldForm], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"s\"\>", ",", "\<\"z\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"s\"\>", ",", "\<\"q\"\>"}]]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, TableHeadings -> {{"a", "c", "r", "s"}, {"z", "w", "y", "q"}}, 
+    TableAlignments -> Automatic]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662296554*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"q\"\>",
+        HoldForm], 
+       TagBox["\<\"w\"\>",
+        HoldForm], 
+       TagBox["\<\"x\"\>",
+        HoldForm], 
+       TagBox["\<\"y\"\>",
+        HoldForm], 
+       TagBox["\<\"z\"\>",
+        HoldForm]},
+      {
+       TagBox["\<\"a\"\>",
+        HoldForm], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"a\"\>", ",", "\<\"q\"\>"}]], 
+       RowBox[{
+        SubscriptBox["A", 
+         RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], "+", 
+        SubscriptBox["B", 
+         RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"a\"\>", ",", "\<\"x\"\>"}]], 
+       RowBox[{
+        SubscriptBox["A", 
+         RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], "+", 
+        SubscriptBox["B", 
+         RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"a\"\>", ",", "\<\"z\"\>"}]]},
+      {
+       TagBox["\<\"b\"\>",
+        HoldForm], "0", 
+       SubscriptBox["A", 
+        RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"b\"\>", ",", "\<\"x\"\>"}]], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], "0"},
+      {
+       TagBox["\<\"c\"\>",
+        HoldForm], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"c\"\>", ",", "\<\"q\"\>"}]], 
+       RowBox[{
+        SubscriptBox["A", 
+         RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], "+", 
+        SubscriptBox["B", 
+         RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"c\"\>", ",", "\<\"x\"\>"}]], 
+       RowBox[{
+        SubscriptBox["A", 
+         RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], "+", 
+        SubscriptBox["B", 
+         RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"c\"\>", ",", "\<\"z\"\>"}]]},
+      {
+       TagBox["\<\"d\"\>",
+        HoldForm], "0", 
+       SubscriptBox["A", 
+        RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"d\"\>", ",", "\<\"x\"\>"}]], 
+       SubscriptBox["A", 
+        RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], "0"},
+      {
+       TagBox["\<\"r\"\>",
+        HoldForm], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"r\"\>", ",", "\<\"q\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]], "0", 
+       SubscriptBox["B", 
+        RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"r\"\>", ",", "\<\"z\"\>"}]]},
+      {
+       TagBox["\<\"s\"\>",
+        HoldForm], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"s\"\>", ",", "\<\"q\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]], "0", 
+       SubscriptBox["B", 
+        RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]], 
+       SubscriptBox["B", 
+        RowBox[{"\<\"s\"\>", ",", "\<\"z\"\>"}]]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, 
+    TableHeadings -> {{"a", "b", "c", "d", "r", "s"}, {
+      "q", "w", "x", "y", "z"}}, TableAlignments -> Automatic]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662308902*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"a\"\>",
+        HoldForm], 
+       TagBox["\<\"c\"\>",
+        HoldForm], 
+       TagBox["\<\"r\"\>",
+        HoldForm], 
+       TagBox["\<\"s\"\>",
+        HoldForm]},
+      {
+       TagBox["\<\"a\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}]},
+      {
+       TagBox["\<\"b\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}]},
+      {
+       TagBox["\<\"c\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}]},
+      {
+       TagBox["\<\"d\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, TableHeadings -> {{"a", "b", "c", "d"}, {"a", "c", "r", "s"}}, 
+    TableAlignments -> Automatic]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662321404*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"a\"\>",
+        HoldForm], 
+       TagBox["\<\"b\"\>",
+        HoldForm], 
+       TagBox["\<\"c\"\>",
+        HoldForm], 
+       TagBox["\<\"d\"\>",
+        HoldForm]},
+      {
+       TagBox["\<\"a\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}]}]},
+      {
+       TagBox["\<\"c\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}]},
+      {
+       TagBox["\<\"r\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}]},
+      {
+       TagBox["\<\"s\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, TableHeadings -> {{"a", "c", "r", "s"}, {"a", "b", "c", "d"}}, 
+    TableAlignments -> Automatic]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.65191666233467*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"q\"\>",
+        HoldForm], 
+       TagBox["\<\"w\"\>",
+        HoldForm], 
+       TagBox["\<\"y\"\>",
+        HoldForm], 
+       TagBox["\<\"z\"\>",
+        HoldForm]},
+      {
+       TagBox["\<\"w\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"q\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"q\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"z\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"z\"\>"}]]}]}]},
+      {
+       TagBox["\<\"x\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"q\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"q\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"z\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"z\"\>"}]]}]}]},
+      {
+       TagBox["\<\"y\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"q\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"q\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"z\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"z\"\>"}]]}]}]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, TableHeadings -> {{"w", "x", "y"}, {"q", "w", "y", "z"}}, 
+    TableAlignments -> Automatic]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.6519166623506107`*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["x",
+        HoldForm], 
+       TagBox["y",
+        HoldForm], 
+       TagBox["z",
+        HoldForm]},
+      {
+       TagBox["1",
+        HoldForm], 
+       RowBox[{"2", " ", 
+        RowBox[{"x", "[", "t", "]"}]}], 
+       RowBox[{"2", " ", 
+        RowBox[{"y", "[", "t", "]"}]}], 
+       RowBox[{"2", " ", 
+        RowBox[{"z", "[", "t", "]"}]}]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, 
+    TableHeadings -> {{1}, {$CellContext`x, $CellContext`y, $CellContext`z}}, 
+    TableAlignments -> Automatic]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662363014*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["x",
+        HoldForm], 
+       TagBox["z",
+        HoldForm]},
+      {
+       TagBox["1",
+        HoldForm], "0", "0"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, TableHeadings -> {{1}, {$CellContext`x, $CellContext`z}}, 
+    TableAlignments -> Automatic]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662373335*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["1",
+        HoldForm]},
+      {
+       TagBox["x",
+        HoldForm], 
+       RowBox[{"2", " ", 
+        RowBox[{"x", "[", "t", "]"}]}]},
+      {
+       TagBox["y",
+        HoldForm], 
+       RowBox[{"2", " ", 
+        RowBox[{"y", "[", "t", "]"}]}]},
+      {
+       TagBox["z",
+        HoldForm], 
+       RowBox[{"2", " ", 
+        RowBox[{"z", "[", "t", "]"}]}]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, 
+    TableHeadings -> {{$CellContext`x, $CellContext`y, $CellContext`z}, {1}}, 
+    TableAlignments -> Automatic]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662385293*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["x",
+        HoldForm], 
+       TagBox["y",
+        HoldForm], 
+       TagBox["z",
+        HoldForm]},
+      {
+       TagBox["x",
+        HoldForm], "1", 
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{"x", "[", "t", "]"}], 
+         RowBox[{"y", "[", "t", "]"}]]}], "0"},
+      {
+       TagBox["z",
+        HoldForm], "0", 
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{"z", "[", "t", "]"}], 
+         RowBox[{"y", "[", "t", "]"}]]}], "1"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, 
+    TableHeadings -> {{$CellContext`x, $CellContext`z}, {$CellContext`x, \
+$CellContext`y, $CellContext`z}}, TableAlignments -> Automatic]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662399037*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["1",
+        HoldForm]},
+      {
+       TagBox["x",
+        HoldForm], "0"},
+      {
+       TagBox["z",
+        HoldForm], "0"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, TableHeadings -> {{$CellContext`x, $CellContext`z}, {1}}, 
+    TableAlignments -> Automatic]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.6519166624104967`*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"a\"\>",
+        HoldForm], 
+       TagBox["\<\"b\"\>",
+        HoldForm], 
+       TagBox["\<\"c\"\>",
+        HoldForm], 
+       TagBox["\<\"d\"\>",
+        HoldForm], 
+       TagBox["\<\"r\"\>",
+        HoldForm], 
+       TagBox["\<\"s\"\>",
+        HoldForm]},
+      {
+       TagBox["\<\"a\"\>",
+        HoldForm], 
+       RowBox[{
+        SubsuperscriptBox["A", 
+         RowBox[{"\<\"a\"\>", ",", "\<\"x\"\>"}], "2"], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}], ")"}]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}], ")"}]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}]},
+      {
+       TagBox["\<\"b\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}], ")"}]}]}], 
+       RowBox[{
+        SubsuperscriptBox["A", 
+         RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}], "2"], "+", 
+        SubsuperscriptBox["A", 
+         RowBox[{"\<\"b\"\>", ",", "\<\"x\"\>"}], "2"], "+", 
+        SubsuperscriptBox["A", 
+         RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}], "2"]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}], ")"}]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}]},
+      {
+       TagBox["\<\"c\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}], ")"}]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        SubsuperscriptBox["A", 
+         RowBox[{"\<\"c\"\>", ",", "\<\"x\"\>"}], "2"], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}], ")"}]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}]},
+      {
+       TagBox["\<\"d\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}], ")"}]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"b\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"x\"\>"}]], " ", 
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["A", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], "+", 
+           SubscriptBox["B", 
+            RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}], ")"}]}]}], 
+       RowBox[{
+        SubsuperscriptBox["A", 
+         RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}], "2"], "+", 
+        SubsuperscriptBox["A", 
+         RowBox[{"\<\"d\"\>", ",", "\<\"x\"\>"}], "2"], "+", 
+        SubsuperscriptBox["A", 
+         RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}], "2"]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"d\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, 
+    TableHeadings -> {{"a", "b", "c", "d"}, {"a", "b", "c", "d", "r", "s"}}, 
+    TableAlignments -> Automatic]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.6519166624262323`*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "0", "0"},
+     {"0", 
+      SubscriptBox["c", "x"], 
+      RowBox[{"-", 
+       SubscriptBox["s", "x"]}], 
+      RowBox[{
+       RowBox[{"-", "s"}], " ", 
+       SubscriptBox["s", "x"]}]},
+     {"0", 
+      SubscriptBox["s", "x"], 
+      SubscriptBox["c", "x"], 
+      RowBox[{"s", " ", 
+       SubscriptBox["c", "x"]}]},
+     {"0", "0", "0", "1"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662440894*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "0"},
+     {"0", 
+      SubscriptBox["c", "x"], 
+      RowBox[{"-", 
+       SubscriptBox["s", "x"]}]},
+     {"0", 
+      SubscriptBox["s", "x"], 
+      SubscriptBox["c", "x"]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Print",
+ CellChangeTimes->{{3.651916479892828*^9, 3.651916488953452*^9}, 
+   3.65191652191673*^9, 3.651916614043869*^9, 3.651916662454534*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SPart", "[", 
+   RowBox[{"m0E", ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<a\>\"", ",", "\"\<c\>\"", ",", "\"\<r\>\"", ",", "\"\<s\>\"", ",", 
+      "\"\<q\>\""}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<a\>\"", ",", "\"\<q\>\"", ",", "\"\<u\>\"", ",", "\"\<v\>\"", ",", 
+      "\"\<w\>\"", ",", "\"\<c\>\""}], "}"}]}], "]"}], "//", 
+  "SMatrixForm"}]], "Input",
+ CellChangeTimes->{{3.651408564217805*^9, 3.651408643106995*^9}, {
+  3.651409631732822*^9, 3.651409707438995*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"a\"\>",
+        HoldForm], 
+       TagBox["\<\"c\"\>",
+        HoldForm], 
+       TagBox["\<\"q\"\>",
+        HoldForm], 
+       TagBox["\<\"u\"\>",
+        HoldForm], 
+       TagBox["\<\"v\"\>",
+        HoldForm], 
+       TagBox["\<\"w\"\>",
+        HoldForm]},
+      {
+       TagBox["\<\"a\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]]}]}], "0", "0", "0", "0"},
+      {
+       TagBox["\<\"c\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]]}]}], "0", "0", "0", "0"},
+      {
+       TagBox["\<\"q\"\>",
+        HoldForm], "0", "0", "0", "0", "0", "0"},
+      {
+       TagBox["\<\"r\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"r\"\>", ",", "\<\"y\"\>"}]]}]}], "0", "0", "0", "0"},
+      {
+       TagBox["\<\"s\"\>",
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"a\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"w\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"w\"\>"}]]}], "+", 
+        RowBox[{
+         SubscriptBox["A", 
+          RowBox[{"\<\"c\"\>", ",", "\<\"y\"\>"}]], " ", 
+         SubscriptBox["B", 
+          RowBox[{"\<\"s\"\>", ",", "\<\"y\"\>"}]]}]}], "0", "0", "0", "0"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   BoxForm`e$, 
+    TableHeadings -> {{"a", "c", "q", "r", "s"}, {
+      "a", "c", "q", "u", "v", "w"}}, TableAlignments -> 
+    Automatic]]]], "Output",
+ CellChangeTimes->{{3.651408596790406*^9, 3.6514086434280233`*^9}, {
+   3.651409632834976*^9, 3.6514097077067747`*^9}, 3.6515566979482603`*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 651},
+WindowMargins->{{20, Automatic}, {Automatic, 44}},
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 29, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 252, 5, 28, "Input"],
+Cell[835, 29, 424, 7, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1296, 41, 305, 5, 62, "Input"],
+Cell[CellGroupData[{
+Cell[1626, 50, 269, 6, 24, "Print"],
+Cell[1898, 58, 234, 5, 22, "Print"],
+Cell[2135, 65, 234, 5, 22, "Print"],
+Cell[2372, 72, 1474, 43, 70, "Print"],
+Cell[3849, 117, 1083, 32, 54, "Print"],
+Cell[4935, 151, 1343, 41, 54, "Print"],
+Cell[6281, 194, 1474, 43, 70, "Print"],
+Cell[7758, 239, 2311, 70, 70, "Print"],
+Cell[10072, 311, 1586, 56, 150, "Print"],
+Cell[11661, 369, 2402, 70, 94, "Print"],
+Cell[14066, 441, 2762, 80, 94, "Print"],
+Cell[16831, 523, 4003, 117, 130, "Print"],
+Cell[20837, 642, 7850, 224, 94, "Print"],
+Cell[28690, 868, 7849, 224, 94, "Print"],
+Cell[36542, 1094, 6212, 177, 76, "Print"],
+Cell[42757, 1273, 1503, 44, 38, "Print"],
+Cell[44263, 1319, 1252, 35, 38, "Print"],
+Cell[45518, 1356, 1519, 46, 70, "Print"],
+Cell[47040, 1404, 1645, 49, 76, "Print"],
+Cell[48688, 1455, 1262, 36, 54, "Print"],
+Cell[49953, 1493, 15721, 437, 110, "Print"],
+Cell[65677, 1932, 1051, 31, 70, "Print"],
+Cell[66731, 1965, 878, 25, 54, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[67658, 1996, 532, 14, 28, "Input"],
+Cell[68193, 2012, 4986, 145, 123, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

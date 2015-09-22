@@ -1,0 +1,1258 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     44638,       1249]
+NotebookOptionsPosition[     43581,       1207]
+NotebookOutlinePosition[     43965,       1224]
+CellTagsIndexPosition[     43922,       1221]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["SETUP", "Section",
+ CellChangeTimes->{{3.65157047114548*^9, 3.6515704722080507`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "SetDirectory", "[", 
+   "\"\</Users/renatoorsino/PPGEM-USP/Packages/MoSsPack/\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "setup.m"}]}], "Input",
+ CellChangeTimes->{{3.6519164175722513`*^9, 3.651916418809723*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["SPHERICAL PENDULUM", "Section",
+ CellChangeTimes->{{3.651570434441017*^9, 3.651570445343987*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Sy11", "=", 
+   RowBox[{"MoSs", "[", 
+    RowBox[{"\"\<\[ScriptCapitalS]\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{"NewtonEuler", "[", 
+       RowBox[{
+       "\"\<\[ScriptCapitalB]\>\"", ",", "\"\<Position\>\"", ",", 
+        "\"\<-z\>\""}], "]"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sy11", "[", 
+    RowBox[{"\"\<*q\>\"", "[", "\"\<0\>\"", "]"}], "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{
+       SubscriptBox["p", 
+        RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<x\>\""}]], "[", "t", 
+       "]"}], "2"], "+", 
+     SuperscriptBox[
+      RowBox[{
+       SubscriptBox["p", 
+        RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<y\>\""}]], "[", "t", 
+       "]"}], "2"], "+", 
+     SuperscriptBox[
+      RowBox[{
+       SubscriptBox["p", 
+        RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<z\>\""}]], "[", "t", 
+       "]"}], "2"], "-", 
+     SuperscriptBox[
+      OverscriptBox["a", "_"], "2"]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sy11", "[", "\"\<Replacement Rules\>\"", "]"}], "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{
+        SubscriptBox["p", 
+         RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<x\>\""}]], "[", "t", 
+        "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{
+        SubscriptBox["p", 
+         RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<y\>\""}]], "[", "t", 
+        "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{
+        SubscriptBox["p", 
+         RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<z\>\""}]], "[", "t", 
+        "]"}], "2"]}], "\[Rule]", " ", 
+     SuperscriptBox[
+      OverscriptBox["a", "_"], "2"]}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sy11", "[", 
+    RowBox[{"\"\<q#\>\"", "[", "\"\<0\>\"", "]"}], "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["p", 
+       RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<x\>\""}]], "[", "t", 
+      "]"}], ",", 
+     RowBox[{
+      SubscriptBox["p", 
+       RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<y\>\""}]], "[", "t", 
+      "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sy11", "[", 
+    RowBox[{"\"\<q#\>\"", "[", "\"\<1\>\"", "]"}], "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["v", 
+       RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<x\>\""}]], "[", "t", 
+      "]"}], ",", 
+     RowBox[{
+      SubscriptBox["v", 
+       RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<y\>\""}]], "[", "t", 
+      "]"}], ",", 
+     RowBox[{
+      SubscriptBox["\[Omega]", 
+       RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<x\>\""}]], "[", "t", 
+      "]"}], ",", 
+     RowBox[{
+      SubscriptBox["\[Omega]", 
+       RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<y\>\""}]], "[", "t", 
+      "]"}], ",", 
+     RowBox[{
+      SubscriptBox["\[Omega]", 
+       RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<z\>\""}]], "[", "t", 
+      "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sy11", "[", "\"\<Explicit EOM\>\"", "]"}], "=", "\"\<Yes\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sy11", "=", 
+    RowBox[{"MoSs", " ", "@", " ", "Sy11"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Sy11", "[", "\"\<_f\>\"", "]"}], "//", 
+  "TableForm"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Sy11", "[", "\"\<S\>\"", "]"}], "//", "SMatrixForm"}]}], "Input",
+ CellChangeTimes->{{3.651570490746626*^9, 3.651570497775196*^9}, {
+   3.651570637097983*^9, 3.651570719405657*^9}, 3.651570768793746*^9, {
+   3.651570863852043*^9, 3.651570869984041*^9}, {3.651814753248645*^9, 
+   3.651814781369768*^9}, 3.65182329193922*^9, {3.6518236014592733`*^9, 
+   3.6518236190906353`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["v", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          SubscriptBox["p", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", "t",
+           "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            OverscriptBox["g", "_"], " ", 
+            RowBox[{
+             SubscriptBox["p", 
+              RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", 
+             "t", "]"}]}], "-", 
+           SuperscriptBox[
+            RowBox[{
+             SubscriptBox["v", 
+              RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", 
+             "t", "]"}], "2"], "-", 
+           SuperscriptBox[
+            RowBox[{
+             SubscriptBox["v", 
+              RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", 
+             "t", "]"}], "2"], "-", 
+           SuperscriptBox[
+            RowBox[{
+             SubscriptBox["v", 
+              RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", 
+             "t", "]"}], "2"]}], ")"}]}], 
+        SuperscriptBox[
+         OverscriptBox["a", "_"], "2"]]}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["v", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          SubscriptBox["p", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", "t",
+           "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            OverscriptBox["g", "_"], " ", 
+            RowBox[{
+             SubscriptBox["p", 
+              RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", 
+             "t", "]"}]}], "-", 
+           SuperscriptBox[
+            RowBox[{
+             SubscriptBox["v", 
+              RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", 
+             "t", "]"}], "2"], "-", 
+           SuperscriptBox[
+            RowBox[{
+             SubscriptBox["v", 
+              RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", 
+             "t", "]"}], "2"], "-", 
+           SuperscriptBox[
+            RowBox[{
+             SubscriptBox["v", 
+              RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", 
+             "t", "]"}], "2"]}], ")"}]}], 
+        SuperscriptBox[
+         OverscriptBox["a", "_"], "2"]]}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["v", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", 
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{
+          RowBox[{
+           OverscriptBox["g", "_"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{
+               SubscriptBox["p", 
+                RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[",
+                "t", "]"}], "2"], "+", 
+             SuperscriptBox[
+              RowBox[{
+               SubscriptBox["p", 
+                RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[",
+                "t", "]"}], "2"]}], ")"}]}], "+", 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["p", 
+             RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", 
+            "t", "]"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{
+               SubscriptBox["v", 
+                RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[",
+                "t", "]"}], "2"], "+", 
+             SuperscriptBox[
+              RowBox[{
+               SubscriptBox["v", 
+                RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[",
+                "t", "]"}], "2"], "+", 
+             SuperscriptBox[
+              RowBox[{
+               SubscriptBox["v", 
+                RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[",
+                "t", "]"}], "2"]}], ")"}]}]}], 
+         SuperscriptBox[
+          OverscriptBox["a", "_"], "2"]]}]}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["\[Omega]", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox[
+            OverscriptBox["\[CapitalIota]", "_"], 
+            RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "-", 
+           SubscriptBox[
+            OverscriptBox["\[CapitalIota]", "_"], 
+            RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]]}], ")"}],
+          " ", 
+         RowBox[{
+          SubscriptBox["\[Omega]", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", "t",
+           "]"}], " ", 
+         RowBox[{
+          SubscriptBox["\[Omega]", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", "t",
+           "]"}]}], 
+        SubscriptBox[
+         OverscriptBox["\[CapitalIota]", "_"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]]]}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["\[Omega]", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox[
+             OverscriptBox["\[CapitalIota]", "_"], 
+             RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+           
+           SubscriptBox[
+            OverscriptBox["\[CapitalIota]", "_"], 
+            RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]]}], ")"}],
+          " ", 
+         RowBox[{
+          SubscriptBox["\[Omega]", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", "t",
+           "]"}], " ", 
+         RowBox[{
+          SubscriptBox["\[Omega]", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", "t",
+           "]"}]}], 
+        SubscriptBox[
+         OverscriptBox["\[CapitalIota]", "_"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]]]}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["\[Omega]", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox[
+            OverscriptBox["\[CapitalIota]", "_"], 
+            RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "-", 
+           SubscriptBox[
+            OverscriptBox["\[CapitalIota]", "_"], 
+            RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]]}], ")"}],
+          " ", 
+         RowBox[{
+          SubscriptBox["\[Omega]", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", "t",
+           "]"}], " ", 
+         RowBox[{
+          SubscriptBox["\[Omega]", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", "t",
+           "]"}]}], 
+        SubscriptBox[
+         OverscriptBox["\[CapitalIota]", "_"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]]]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.6515708745995197`*^9, 3.651698512723914*^9, 3.651811548421946*^9, {
+   3.651814773163931*^9, 3.651814781670507*^9}, 3.651818876940942*^9, 
+   3.651820179558362*^9, {3.6518210084756937`*^9, 3.651821013993524*^9}, 
+   3.651821341247778*^9, 3.651823292398862*^9, 3.651823620615975*^9, 
+   3.6518982891380777`*^9, 3.651916427281941*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox[
+        SubscriptBox["v", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]],
+        HoldForm], 
+       TagBox[
+        SubscriptBox["v", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]],
+        HoldForm], 
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]],
+        HoldForm], 
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]],
+        HoldForm], 
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]],
+        HoldForm]},
+      {
+       TagBox[
+        SubscriptBox["v", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]],
+        HoldForm], "1", "0", "0", "0", "0"},
+      {
+       TagBox[
+        SubscriptBox["v", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]],
+        HoldForm], "0", "1", "0", "0", "0"},
+      {
+       TagBox[
+        SubscriptBox["v", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]],
+        HoldForm], 
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{
+          SubscriptBox["p", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", "t",
+           "]"}], 
+         RowBox[{
+          SubscriptBox["p", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", "t",
+           "]"}]]}], 
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{
+          SubscriptBox["p", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", "t",
+           "]"}], 
+         RowBox[{
+          SubscriptBox["p", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", "t",
+           "]"}]]}], "0", "0", "0"},
+      {
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]],
+        HoldForm], "0", "0", "1", "0", "0"},
+      {
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]],
+        HoldForm], "0", "0", "0", "1", "0"},
+      {
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]],
+        HoldForm], "0", "0", "0", "0", "1"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$, TableHeadings -> {{
+       Subscript[$CellContext`v, "\[ScriptCapitalB]", "x"], 
+       Subscript[$CellContext`v, "\[ScriptCapitalB]", "y"], 
+       Subscript[$CellContext`v, "\[ScriptCapitalB]", "z"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "x"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "y"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "z"]}, {
+       Subscript[$CellContext`v, "\[ScriptCapitalB]", "x"], 
+       Subscript[$CellContext`v, "\[ScriptCapitalB]", "y"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "x"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "y"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "z"]}}, 
+    TableAlignments -> Automatic]]]], "Output",
+ CellChangeTimes->{
+  3.6515708745995197`*^9, 3.651698512723914*^9, 3.651811548421946*^9, {
+   3.651814773163931*^9, 3.651814781670507*^9}, 3.651818876940942*^9, 
+   3.651820179558362*^9, {3.6518210084756937`*^9, 3.651821013993524*^9}, 
+   3.651821341247778*^9, 3.651823292398862*^9, 3.651823620615975*^9, 
+   3.6518982891380777`*^9, 3.651916427302372*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["SIMPLE PENDULUM", "Section",
+ CellChangeTimes->{{3.651570463327821*^9, 3.651570465688018*^9}, {
+  3.651570614405209*^9, 3.651570618252798*^9}, {3.651823295786108*^9, 
+  3.651823296793331*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Sy12", " ", "=", 
+   RowBox[{"MoSs", "[", 
+    RowBox[{"\"\<\[ScriptCapitalP]\>\"", ",", 
+     RowBox[{"{", "Sy11", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sy12", "[", 
+    RowBox[{"\"\<q\>\"", "[", "\"\<0\>\"", "]"}], "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", "[", "t", "]"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sy12", "[", 
+    RowBox[{"\"\<*q\>\"", "[", "\"\<0\>\"", "]"}], "]"}], "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SubscriptBox["p", 
+        RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<x\>\""}]], "[", "t", 
+       "]"}], "-", " ", 
+      RowBox[{
+       OverscriptBox["a", "_"], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"\[Theta]", "[", "t", "]"}], "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["p", 
+       RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<y\>\""}]], "[", "t", 
+      "]"}]}], "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["p", 
+        RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<z\>\""}]], "[", "t", 
+       "]"}], "+", " ", 
+      RowBox[{
+       OverscriptBox["a", "_"], " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"\[Theta]", "[", "t", "]"}], "]"}]}]}], "*)"}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sy12", "[", "\"\<Replacement Rules\>\"", "]"}], "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SubscriptBox["p", 
+        RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<x\>\""}]], "[", "t", 
+       "]"}], "\[Rule]", " ", 
+      RowBox[{
+       OverscriptBox["a", "_"], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"\[Theta]", "[", "t", "]"}], "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["p", 
+        RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<z\>\""}]], "[", "t", 
+       "]"}], "\[Rule]", " ", 
+      RowBox[{
+       RowBox[{"-", " ", 
+        OverscriptBox["a", "_"]}], " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"\[Theta]", "[", "t", "]"}], "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{
+         SubscriptBox["v", 
+          RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<x\>\""}]], "[", "t", 
+         "]"}], "2"], "+", 
+       SuperscriptBox[
+        RowBox[{
+         SubscriptBox["v", 
+          RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<y\>\""}]], "[", "t", 
+         "]"}], "2"], "+", 
+       SuperscriptBox[
+        RowBox[{
+         SubscriptBox["v", 
+          RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<z\>\""}]], "[", "t", 
+         "]"}], "2"]}], "\[Rule]", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         OverscriptBox["a", "_"], " ", 
+         RowBox[{
+          RowBox[{"\[Theta]", "'"}], "[", "t", "]"}]}], ")"}], "2"]}]}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sy12", "[", 
+    RowBox[{"\"\<q#\>\"", "[", "\"\<0\>\"", "]"}], "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", "[", "t", "]"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sy12", "[", 
+    RowBox[{"\"\<q#\>\"", "[", "\"\<1\>\"", "]"}], "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[Theta]", "'"}], "[", "t", "]"}], ",", 
+     RowBox[{
+      SubscriptBox["\[Omega]", 
+       RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<x\>\""}]], "[", "t", 
+      "]"}], ",", 
+     RowBox[{
+      SubscriptBox["\[Omega]", 
+       RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<y\>\""}]], "[", "t", 
+      "]"}], ",", 
+     RowBox[{
+      SubscriptBox["\[Omega]", 
+       RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<z\>\""}]], "[", "t", 
+      "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sy12", "[", "\"\<Explicit EOM\>\"", "]"}], "=", "\"\<Yes\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sy12", "=", 
+    RowBox[{"MoSs", " ", "@", " ", "Sy12"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Sy12", "[", "\"\<_f\>\"", "]"}], "//", 
+  "TableForm"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Sy12", "[", "\"\<S\>\"", "]"}], "//", "SMatrixForm"}]}], "Input",
+ CellChangeTimes->{{3.651568749535248*^9, 3.6515687515831127`*^9}, {
+   3.651569220835565*^9, 3.6515692822232847`*^9}, {3.651570280237273*^9, 
+   3.65157042223772*^9}, {3.651570509347413*^9, 3.651570525747817*^9}, {
+   3.651570606432312*^9, 3.651570628566897*^9}, {3.6515706949016027`*^9, 
+   3.651570707634408*^9}, 3.651570771871279*^9, {3.651814620705469*^9, 
+   3.651814649720413*^9}, 3.651814708853997*^9, 3.651814791998514*^9, {
+   3.651823582721765*^9, 3.6518235889453697`*^9}, {3.651832634501156*^9, 
+   3.651832647264436*^9}, {3.65183270588072*^9, 3.65183272673879*^9}, {
+   3.6518327847317247`*^9, 3.651832792079533*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["v", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["s", 
+          RowBox[{"\[Theta]", "[", "t", "]"}]]}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["c", 
+            RowBox[{"\[Theta]", "[", "t", "]"}]], " ", 
+           OverscriptBox["g", "_"]}], "+", 
+          RowBox[{
+           OverscriptBox["a", "_"], " ", 
+           SuperscriptBox[
+            RowBox[{
+             OverscriptBox["\[Theta]", "\<\".\"\>"], "[", "t", "]"}], 
+            "2"]}]}], ")"}]}]}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["v", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["v", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", 
+          OverscriptBox["g", "_"]}], " ", 
+         SubsuperscriptBox["s", 
+          RowBox[{"\[Theta]", "[", "t", "]"}], "2"]}], "+", 
+        RowBox[{
+         SubscriptBox["c", 
+          RowBox[{"\[Theta]", "[", "t", "]"}]], " ", 
+         OverscriptBox["a", "_"], " ", 
+         SuperscriptBox[
+          RowBox[{
+           OverscriptBox["\[Theta]", "\<\".\"\>"], "[", "t", "]"}], 
+          "2"]}]}]}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["\[Omega]", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox[
+            OverscriptBox["\[CapitalIota]", "_"], 
+            RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "-", 
+           SubscriptBox[
+            OverscriptBox["\[CapitalIota]", "_"], 
+            RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]]}], ")"}],
+          " ", 
+         RowBox[{
+          SubscriptBox["\[Omega]", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", "t",
+           "]"}], " ", 
+         RowBox[{
+          SubscriptBox["\[Omega]", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", "t",
+           "]"}]}], 
+        SubscriptBox[
+         OverscriptBox["\[CapitalIota]", "_"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]]]}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["\[Omega]", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            SubscriptBox[
+             OverscriptBox["\[CapitalIota]", "_"], 
+             RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]]}], "+", 
+           
+           SubscriptBox[
+            OverscriptBox["\[CapitalIota]", "_"], 
+            RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]]}], ")"}],
+          " ", 
+         RowBox[{
+          SubscriptBox["\[Omega]", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", "t",
+           "]"}], " ", 
+         RowBox[{
+          SubscriptBox["\[Omega]", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", "t",
+           "]"}]}], 
+        SubscriptBox[
+         OverscriptBox["\[CapitalIota]", "_"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]]]}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["\[Omega]", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox[
+            OverscriptBox["\[CapitalIota]", "_"], 
+            RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "-", 
+           SubscriptBox[
+            OverscriptBox["\[CapitalIota]", "_"], 
+            RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]]}], ")"}],
+          " ", 
+         RowBox[{
+          SubscriptBox["\[Omega]", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", "t",
+           "]"}], " ", 
+         RowBox[{
+          SubscriptBox["\[Omega]", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", "t",
+           "]"}]}], 
+        SubscriptBox[
+         OverscriptBox["\[CapitalIota]", "_"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]]]}]},
+     {
+      RowBox[{
+       RowBox[{
+        OverscriptBox["\[Theta]", "\<\"..\"\>"], "[", "t", "]"}], "\[Rule]", 
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{
+          OverscriptBox["g", "_"], " ", 
+          SubscriptBox["s", 
+           RowBox[{"\[Theta]", "[", "t", "]"}]]}], 
+         OverscriptBox["a", "_"]]}]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.6515692662501087`*^9, 3.651569283488985*^9}, 
+   3.651570293362226*^9, {3.65157033167498*^9, 3.651570352182013*^9}, 
+   3.651570400525888*^9, 3.651570875157776*^9, 3.651698518200708*^9, 
+   3.651811549127864*^9, 3.651814650991371*^9, 3.6518147095407257`*^9, 
+   3.6518147947542953`*^9, 3.65181889085736*^9, 3.651820183609907*^9, 
+   3.651821017721464*^9, 3.6518213458809834`*^9, 3.6518232991048822`*^9, 
+   3.651823624695958*^9, 3.6518327279316998`*^9, 3.651832792934669*^9, 
+   3.6518982988147707`*^9, 3.651916432283325*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]],
+        HoldForm], 
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]],
+        HoldForm], 
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]],
+        HoldForm], 
+       TagBox[
+        OverscriptBox["\[Theta]", "\<\".\"\>"],
+        HoldForm]},
+      {
+       TagBox[
+        SubscriptBox["v", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]],
+        HoldForm], "0", "0", "0", 
+       RowBox[{
+        SubscriptBox["c", 
+         RowBox[{"\[Theta]", "[", "t", "]"}]], " ", 
+        OverscriptBox["a", "_"]}]},
+      {
+       TagBox[
+        SubscriptBox["v", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]],
+        HoldForm], "0", "0", "0", "0"},
+      {
+       TagBox[
+        SubscriptBox["v", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]],
+        HoldForm], "0", "0", "0", 
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{
+          SubscriptBox["c", 
+           RowBox[{"\[Theta]", "[", "t", "]"}]], " ", 
+          OverscriptBox["a", "_"], " ", 
+          RowBox[{
+           SubscriptBox["p", 
+            RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", 
+           "t", "]"}]}], 
+         RowBox[{
+          SubscriptBox["p", 
+           RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", "t",
+           "]"}]]}]},
+      {
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]],
+        HoldForm], "1", "0", "0", "0"},
+      {
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]],
+        HoldForm], "0", "1", "0", "0"},
+      {
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]],
+        HoldForm], "0", "0", "1", "0"},
+      {
+       TagBox[
+        OverscriptBox["\[Theta]", "\<\".\"\>"],
+        HoldForm], "0", "0", "0", "1"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$, TableHeadings -> {{
+       Subscript[$CellContext`v, "\[ScriptCapitalB]", "x"], 
+       Subscript[$CellContext`v, "\[ScriptCapitalB]", "y"], 
+       Subscript[$CellContext`v, "\[ScriptCapitalB]", "z"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "x"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "y"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "z"], 
+       Overscript[$CellContext`\[Theta], "."]}, {
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "x"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "y"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "z"], 
+       Overscript[$CellContext`\[Theta], "."]}}, TableAlignments -> 
+    Automatic]]]], "Output",
+ CellChangeTimes->{{3.6515692662501087`*^9, 3.651569283488985*^9}, 
+   3.651570293362226*^9, {3.65157033167498*^9, 3.651570352182013*^9}, 
+   3.651570400525888*^9, 3.651570875157776*^9, 3.651698518200708*^9, 
+   3.651811549127864*^9, 3.651814650991371*^9, 3.6518147095407257`*^9, 
+   3.6518147947542953`*^9, 3.65181889085736*^9, 3.651820183609907*^9, 
+   3.651821017721464*^9, 3.6518213458809834`*^9, 3.6518232991048822`*^9, 
+   3.651823624695958*^9, 3.6518327279316998`*^9, 3.651832792934669*^9, 
+   3.6518982988147707`*^9, 3.651916432297641*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["SIMPLE PENDULUM \[Dash] LINEARIZED EOM", "Section",
+ CellChangeTimes->{{3.65183363647539*^9, 3.651833655594425*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"<<", "setup.m"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Sy12", "[", "\"\<\[ScriptCapitalS]\>\"", "]"}], "[", 
+     "\"\<\[ScriptCapitalB]\>\"", "]"}], "[", "\"\<Reference Motion\>\"", 
+    "]"}], "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["p", 
+       RowBox[{"\"\<\[ScriptCapitalB]\>\"", ",", "\"\<z\>\""}]], "[", "t", 
+      "]"}], "\[Rule]", 
+     RowBox[{"-", 
+      OverscriptBox["a", "_"]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LSy12", "=", 
+    RowBox[{"LinearizeSystem", " ", "@", " ", "Sy12"}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"LSy12", "//", "Normal"}], "//", "TableForm"}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"LSy12", "[", "\"\<_f\>\"", "]"}], "//", 
+  "TableForm"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"LSy12", "[", "\"\<S\>\"", "]"}], "//", "SMatrixForm"}]}], "Input",
+ CellChangeTimes->{{3.6516983503069363`*^9, 3.651698372800042*^9}, {
+   3.651698477574484*^9, 3.651698494797606*^9}, 3.651698603820425*^9, 
+   3.651814323000952*^9, {3.65181446871017*^9, 3.651814492782702*^9}, {
+   3.6518145718220243`*^9, 3.651814595198882*^9}, {3.651817235915134*^9, 
+   3.651817279418988*^9}, {3.651817343414001*^9, 3.651817343949799*^9}, {
+   3.651817382509307*^9, 3.651817385077423*^9}, {3.651817417113968*^9, 
+   3.651817422640696*^9}, {3.651817587753544*^9, 3.6518175973801622`*^9}, 
+   3.651817660091918*^9, 3.651817900644903*^9, {3.651818523197201*^9, 
+   3.651818535338007*^9}, 3.65182174301551*^9, {3.651828556051145*^9, 
+   3.6518285578495827`*^9}, {3.651833560886944*^9, 3.651833597121395*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["v", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", 
+       RowBox[{
+        RowBox[{"-", 
+         OverscriptBox["g", "_"]}], " ", 
+        RowBox[{"\[Theta]", "[", "t", "]"}]}]}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["v", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["v", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["\[Omega]", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["\[Omega]", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         OverscriptBox["\[Omega]", "\<\".\"\>"], 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]], "[", "t", 
+        "]"}], "\[Rule]", "0"}]},
+     {
+      RowBox[{
+       RowBox[{
+        OverscriptBox["\[Theta]", "\<\"..\"\>"], "[", "t", "]"}], "\[Rule]", 
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{
+          OverscriptBox["g", "_"], " ", 
+          RowBox[{"\[Theta]", "[", "t", "]"}]}], 
+         OverscriptBox["a", "_"]]}]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.651823313781907*^9, 3.6518235213075237`*^9, 3.651823551371862*^9, 
+   3.651823629102625*^9, 3.65182372235532*^9, 3.651823929209689*^9, 
+   3.651827959575629*^9, 3.651828120913183*^9, 3.6518281708912077`*^9, 
+   3.6518284090347157`*^9, 3.651828457148738*^9, 3.651828559473802*^9, 
+   3.65182861708814*^9, 3.651828654466507*^9, 3.651828716810906*^9, 
+   3.651828776548291*^9, 3.651828822803289*^9, 3.651828876559826*^9, 
+   3.6518290132567863`*^9, 3.651829047479849*^9, 3.6518292212709417`*^9, 
+   3.651829608878965*^9, 3.651829647632102*^9, 3.651830229108829*^9, 
+   3.651830299649736*^9, 3.651830671686859*^9, 3.651831015125451*^9, 
+   3.651831396892129*^9, 3.651831636253004*^9, 3.651831838646628*^9, {
+   3.651831930841894*^9, 3.651831944098474*^9}, {3.651832270565723*^9, 
+   3.651832283988104*^9}, 3.651832328278009*^9, 3.651832362918412*^9, 
+   3.6518327528648*^9, 3.65183279951015*^9, 3.65183291850309*^9, 
+   3.651833382075266*^9, 3.6518335986911707`*^9, 3.651898311566264*^9, 
+   3.6519164379684277`*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]],
+        HoldForm], 
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]],
+        HoldForm], 
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]],
+        HoldForm], 
+       TagBox[
+        OverscriptBox["\[Theta]", "\<\".\"\>"],
+        HoldForm]},
+      {
+       TagBox[
+        SubscriptBox["v", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]],
+        HoldForm], "0", "0", "0", 
+       OverscriptBox["a", "_"]},
+      {
+       TagBox[
+        SubscriptBox["v", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]],
+        HoldForm], "0", "0", "0", "0"},
+      {
+       TagBox[
+        SubscriptBox["v", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]],
+        HoldForm], "0", "0", "0", 
+       RowBox[{
+        OverscriptBox["a", "_"], " ", 
+        RowBox[{"\[Theta]", "[", "t", "]"}]}]},
+      {
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"x\"\>"}]],
+        HoldForm], "1", "0", "0", "0"},
+      {
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"y\"\>"}]],
+        HoldForm], "0", "1", "0", "0"},
+      {
+       TagBox[
+        SubscriptBox["\[Omega]", 
+         RowBox[{"\<\"\[ScriptCapitalB]\"\>", ",", "\<\"z\"\>"}]],
+        HoldForm], "0", "0", "1", "0"},
+      {
+       TagBox[
+        OverscriptBox["\[Theta]", "\<\".\"\>"],
+        HoldForm], "0", "0", "0", "1"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}], 
+   "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$, TableHeadings -> {{
+       Subscript[$CellContext`v, "\[ScriptCapitalB]", "x"], 
+       Subscript[$CellContext`v, "\[ScriptCapitalB]", "y"], 
+       Subscript[$CellContext`v, "\[ScriptCapitalB]", "z"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "x"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "y"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "z"], 
+       Overscript[$CellContext`\[Theta], "."]}, {
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "x"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "y"], 
+       Subscript[$CellContext`\[Omega], "\[ScriptCapitalB]", "z"], 
+       Overscript[$CellContext`\[Theta], "."]}}, TableAlignments -> 
+    Automatic]]]], "Output",
+ CellChangeTimes->{
+  3.651823313781907*^9, 3.6518235213075237`*^9, 3.651823551371862*^9, 
+   3.651823629102625*^9, 3.65182372235532*^9, 3.651823929209689*^9, 
+   3.651827959575629*^9, 3.651828120913183*^9, 3.6518281708912077`*^9, 
+   3.6518284090347157`*^9, 3.651828457148738*^9, 3.651828559473802*^9, 
+   3.65182861708814*^9, 3.651828654466507*^9, 3.651828716810906*^9, 
+   3.651828776548291*^9, 3.651828822803289*^9, 3.651828876559826*^9, 
+   3.6518290132567863`*^9, 3.651829047479849*^9, 3.6518292212709417`*^9, 
+   3.651829608878965*^9, 3.651829647632102*^9, 3.651830229108829*^9, 
+   3.651830299649736*^9, 3.651830671686859*^9, 3.651831015125451*^9, 
+   3.651831396892129*^9, 3.651831636253004*^9, 3.651831838646628*^9, {
+   3.651831930841894*^9, 3.651831944098474*^9}, {3.651832270565723*^9, 
+   3.651832283988104*^9}, 3.651832328278009*^9, 3.651832362918412*^9, 
+   3.6518327528648*^9, 3.65183279951015*^9, 3.65183291850309*^9, 
+   3.651833382075266*^9, 3.6518335986911707`*^9, 3.651898311566264*^9, 
+   3.651916437977178*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1280, 751},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 29, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 91, 1, 80, "Section"],
+Cell[674, 25, 270, 7, 57, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[981, 37, 103, 1, 80, "Section"],
+Cell[CellGroupData[{
+Cell[1109, 42, 3975, 116, 299, "Input"],
+Cell[5087, 160, 8500, 235, 280, "Output"],
+Cell[13590, 397, 4333, 112, 210, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17972, 515, 198, 3, 80, "Section"],
+Cell[CellGroupData[{
+Cell[18195, 522, 5094, 143, 451, "Input"],
+Cell[23292, 667, 6293, 175, 302, "Output"],
+Cell[29588, 844, 4350, 111, 252, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33987, 961, 122, 1, 80, "Section"],
+Cell[CellGroupData[{
+Cell[34134, 966, 1744, 40, 163, "Input"],
+Cell[35881, 1008, 3312, 88, 252, "Output"],
+Cell[39196, 1098, 4357, 105, 292, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
