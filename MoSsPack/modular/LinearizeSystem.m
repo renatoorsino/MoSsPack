@@ -38,24 +38,27 @@ LinearizeSystem[xSystem_, xLinSubsystemsModels_: Association[], xExtraReferenceM
 		)& /@  xKeys;
 
 		xKeys = Part[#, 1]& /@ Union @ (Select[Keys @ xIn, Part[#, 0] === "*q"&]);
-		(xOut["*q"[#]] = RedundantElim @ (Linearize[xIn["*q"[#]] (* //. xIn["_c"] *), 
-			xReferenceMotion] //. xExtraRules))& /@ xKeys;
-		(xOut["*q"[#]] = {})& /@ Complement[ToString /@ Range[0, Max[2, xOut["q:Order"]]], xKeys];		
-		xOut["_c"] = Union @@ (((xOut[#]["_c"])& /@ xOut["Subsystems Labels"]) //. Missing[xX__]-> {});
-		xOut["_c"] = Union @@ {
-			xOut["_c"],
-			Union[#, # /. {(xA_ -> xB_) -> (-xA -> -xB)}]& @ 
-				(((#-> 0)& /@ RedundantElim @ ((Union @@ (xOut["*q"[#]]& /@ xKeys)) 
-					//. {xX_[t]-> 0} //. xExtraRules)) /. {({} -> 0) -> {}})
-			};
-		xOut["_c"] = Union @@ {
-			xOut["_c"],
-			((#-> 0)& /@ (RedundantElim @ (
-				(Linearize[xIn["_c"] /. {(xX_ -> xY_) -> (xX - xY)}, xReferenceMotion] 
-				//.xExtraRules) //.xOut["_c"]
-				)))
-			};
-		(* (xOut["*q"[#]] = RedundantElim @ (xOut["*q"[#]] //. xOut["_c"] //. xExtraRules))& /@ xKeys; *)
+		Module[{xRules},
+			(xOut["*q"[#]] = RedundantElim @ (Linearize[xIn["*q"[#]] (* //. xIn["_c"] *), 
+				xReferenceMotion] //. xExtraRules))& /@ xKeys;
+			xRules = (((#-> 0)& /@ Expand @ RedundantElim @ ((Union @@ (xOut["*q"[#]]& /@ xKeys)) 
+						//. {xX_[t]-> 0} //. xExtraRules)) /. {({} -> 0) -> {}});
+			(xOut["*q"[#]] = RedundantElim @ ((Expand @ xOut["*q"[#]]) //. xRules //. xExtraRules))& /@ xKeys;
+			(xOut["*q"[#]] = {})& /@ Complement[ToString /@ Range[0, Max[2, xOut["q:Order"]]], xKeys];		
+			xOut["_c"] = Union @@ (((xOut[#]["_c"])& /@ xOut["Subsystems Labels"]) //. Missing[xX__]-> {});
+			xOut["_c"] = Union @@ {
+				xOut["_c"],
+				Union[#, # /. {(xA_ -> xB_) -> (-xA -> -xB)}]& @ xRules					
+				};
+			xOut["_c"] = Union @@ {
+				xOut["_c"],
+				((#-> 0)& /@ (RedundantElim @ (
+					(Linearize[xIn["_c"] /. {(xX_ -> xY_) -> (xX - xY)}, xReferenceMotion] 
+					//.xExtraRules) //.xOut["_c"]
+					)))
+				};
+			(* (xOut["*q"[#]] = RedundantElim @ (xOut["*q"[#]] //. xOut["_c"] //. xExtraRules))& /@ xKeys; *)	
+			];	
 		If[xOut["Debug Mode"] === "On",
 			Print[StringForm["``:``:*q:OK",
 				NumberForm[Round[AbsoluteTime[] - xTimer, 0.01], {5, 2}], 
