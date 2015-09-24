@@ -113,10 +113,18 @@ LinearizeSystem[xSystem_, xLinSubsystemsModels_: Association[], xExtraReferenceM
 					Simplify @ (Linearize[#, xReferenceMotion] //. xOut["_c"] //. xExtraRules)&, 
 					xIn["C"]
 					],
-				xOut["C"] = LSLinearizedOrthogonalComplement[
-					xOut["B"],
-					xOut["q#"[xKeys]],
-					xOut["_c"]
+				If[KeyExistsQ[xIn, "C:Symmetry"],	
+					xOut["C"] = LSLinearizedOrthogonalComplement[
+						xOut["B"],
+						xOut["q#"[xKeys]],
+						xOut["_c"],
+						xIn["C:Symmetry"]
+						],
+					xOut["C"] = LSLinearizedOrthogonalComplement[
+						xOut["B"],
+						xOut["q#"[xKeys]],
+						xOut["_c"]
+						]	
 					]
 				];
 			If[And[KeyExistsQ[xIn, "S"], 
