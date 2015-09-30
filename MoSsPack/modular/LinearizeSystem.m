@@ -37,14 +37,14 @@ LinearizeSystem[xSystem_, xLinSubsystemsModels_: Association[], xExtraReferenceM
 			]& @ StringSplit[#, {":", "|"}]
 		)& /@  xKeys;
 
-		xKeys = Part[#, 1]& /@ Union @ (Select[Keys @ xIn, Part[#, 0] === "*q"&]);
+		xKeys = Part[#, 1]& /@ Union @ (Select[Keys @ xIn, Part[#, 0] === "*q+"&]);
 		Module[{xRules},
-			(xOut["*q"[#]] = RedundantElim @ (Linearize[xIn["*q"[#]] (* //. xIn["_c"] *), 
+			(xOut["*q+"[#]] = RedundantElim @ (Linearize[xIn["*q+"[#]] (* //. xIn["_c"] *), 
 				xReferenceMotion] //. xExtraRules))& /@ xKeys;
-			xRules = (((#-> 0)& /@ Expand @ RedundantElim @ ((Union @@ (xOut["*q"[#]]& /@ xKeys)) 
+			xRules = (((#-> 0)& /@ Expand @ RedundantElim @ ((Union @@ (xOut["*q+"[#]]& /@ xKeys)) 
 						//. {xX_[t]-> 0} //. xExtraRules)) /. {({} -> 0) -> {}});
-			(xOut["*q"[#]] = RedundantElim @ ((Expand @ xOut["*q"[#]]) //. xRules //. xExtraRules))& /@ xKeys;
-			(xOut["*q"[#]] = {})& /@ Complement[ToString /@ Range[0, Max[2, xOut["q:Order"]]], xKeys];		
+			(xOut["*q+"[#]] = RedundantElim @ ((Expand @ xOut["*q+"[#]]) //. xRules //. xExtraRules))& /@ xKeys;
+			(xOut["*q+"[#]] = {})& /@ Complement[ToString /@ Range[0, Max[2, xOut["q:Order"]]], xKeys];		
 			xOut["_c"] = Union @@ (((xOut[#]["_c"])& /@ xOut["Subsystems Labels"]) //. Missing[xX__]-> {});
 			xOut["_c"] = Union @@ {
 				xOut["_c"],
@@ -57,7 +57,11 @@ LinearizeSystem[xSystem_, xLinSubsystemsModels_: Association[], xExtraReferenceM
 					//.xExtraRules) //.xOut["_c"]
 					)))
 				};
-			(* (xOut["*q"[#]] = RedundantElim @ (xOut["*q"[#]] //. xOut["_c"] //. xExtraRules))& /@ xKeys; *)	
+			(* (xOut["*q+"[#]] = RedundantElim @ (xOut["*q+"[#]] //. xOut["_c"] //. xExtraRules))& /@ xKeys; *)	
+			(xOut["*q"[#]] = Union[
+				xOut["*q+"[#]] //. Missing[xX__] -> {},
+				Union @@ (Function[{xSub}, xOut[xSub]["*q"[#]] //. Missing[xX__] -> {}] /@ xIn["Subsystems Labels"])
+				])& /@ (ToString /@ Range[0, Max[2, xOut["q:Order"]]]);
 			];	
 		If[xOut["Debug Mode"] === "On",
 			Print[StringForm["``:``:*q:OK",
@@ -77,17 +81,37 @@ LinearizeSystem[xSystem_, xLinSubsystemsModels_: Association[], xExtraReferenceM
 					{xFirst, xLast} //. {xX_[t] -> 0}, 1]
 				}, (Not @ (First[#] - Last[#] === 0))&];
 			]& /@ xKeys;
-
-		Module[{xEquations},
-			xEquations = RedundantElim @ (xOut["*q"[#]] //. xOut["_c"]);
-			xOut["_q"[#]] = If[Or[xEquations === {}, SetComplement[xIn["q"[#]], xOut["q#"[#]]] === {}], 
-				(* xOut["_q"[#]] //. Missing[xX__]-> *) {},
-				Function[{xX},
-					MapThread[(#1-> #2)&, {
-						xX,
-						Flatten @ (-LinearSolve @@ Reverse @ CoefficientArrays[xEquations, xX])
-						}, 1]
-					] @ SetComplement[Intersection[xIn["q"[#]], GetVariables @ xEquations], xOut["q#"[#]]] //.xExtraRules
+		xOut["Test Parameters"] = (xIn["Test Parameters"] //. Missing[xX__] -> {});
+		Module[{xEquations, xTemp},
+			xEquations = RedundantElim @ (xOut["*q+"[#]] //. xOut["_c"]);
+			If[Or[xEquations === {}, SetComplement[xIn["q"[#]], xOut["q#"[#]]] === {}], 
+				(*-TRUE-*)
+				xOut["_q"[#]] = (* xOut["_q"[#]] //. Missing[xX__]-> *) {},
+				(*-FALSE-*)
+				If[Not @ (KeyExistsQ[xOut, "_q?Size"]),
+					(*-TRUE-*)
+					xOut["_q"[#]] = Function[{xX},
+						MapThread[(#1-> #2)&, {
+							xX,
+							Flatten @ (-LinearSolve @@ Reverse @ CoefficientArrays[xEquations, xX])
+							}, 1]
+						] @ SetComplement[Intersection[xIn["q"[#]], GetVariables @ xEquations], xOut["q#"[#]]] //.xExtraRules,
+					(*-FALSE-*)	
+					If[(ToExpression @ #) <= xOut["q:Order"],
+						(*-TRUE-*)
+						{xOut["_q"[#]], xTemp} = LSSolver[xEquations, xIn["q"[#]], xOut["q#"[#]], 
+							xOut["_c"],	Union[xOut["Replacement Rules"], xExtraRules], 
+							xOut["_q?Size"], xOut["Test Parameters"],
+							xIn["C:Symmetry"] //. Missing[xX__] -> Automatic
+							];	
+						xOut["Test Parameters"] = Union[xOut["Test Parameters"], xTemp],
+						(*-FALSE-*)
+						xOut["_q"[#]] = Expand @ (D[
+							xOut["_q"[ToString @ xOut["q:Order"]]], 
+							{t, (ToExpression @ #) - xOut["q:Order"]}
+							] //. xOut["_c"])
+						]	
+					]
 				];
 			xOut["_c"] = Complement[Union @@ {xOut["_c"], xOut["_q"[#]]}, {0 -> 0}];
 			]& /@ (ToString /@ Range[0, Max[2, xOut["q:Order"]]]);
@@ -113,18 +137,12 @@ LinearizeSystem[xSystem_, xLinSubsystemsModels_: Association[], xExtraReferenceM
 					Simplify @ (Linearize[#, xReferenceMotion] //. xOut["_c"] //. xExtraRules)&, 
 					xIn["C"]
 					],
-				If[KeyExistsQ[xIn, "C:Symmetry"],	
-					xOut["C"] = LSLinearizedOrthogonalComplement[
-						xOut["B"],
-						xOut["q#"[xKeys]],
-						xOut["_c"],
-						xIn["C:Symmetry"]
-						],
-					xOut["C"] = LSLinearizedOrthogonalComplement[
-						xOut["B"],
-						xOut["q#"[xKeys]],
-						xOut["_c"]
-						]	
+				xOut["C"] = LSLinearizedOrthogonalComplement[
+					xOut["B"],
+					xOut["q#"[xKeys]],
+					xOut["_c"],
+					xIn["C:Symmetry"] //. Missing[xX__] -> Automatic,
+					xOut["Test Parameters"]
 					]
 				];
 			If[And[KeyExistsQ[xIn, "S"], 
@@ -133,18 +151,20 @@ LinearizeSystem[xSystem_, xLinSubsystemsModels_: Association[], xExtraReferenceM
 					Simplify @ (Linearize[#, xReferenceMotion] //. xOut["_c"] //. xExtraRules)&, 
 					xIn["S"]
 					],
-				xA = {};
-				If[KeyExistsQ[xOut[#], "S"], AppendTo[xA, xOut[#]["S"]]]& /@ xIn["Subsystems Labels"];
-				If[xA === {},
-					xOut["S"] = xOut["C"],
-					If[Not @ (xOut["q+"[xKeys]] === {}),
-						AppendTo[xA, SAssemble[1, xOut["q+"[xKeys]]]]
-						];
-					xOut["S"] = Linearize @ ((SAssemble @@ xA) ~SDot~ xOut["C"])
-					];	
+				If[Not @ (xIn["S?"] === "No"),
+					xA = {};
+					If[KeyExistsQ[xOut[#], "S"], AppendTo[xA, xOut[#]["S"]]]& /@ xIn["Subsystems Labels"];
+					If[xA === {},
+						xOut["S"] = xOut["C"],
+						If[Not @ (xOut["q+"[xKeys]] === {}),
+							AppendTo[xA, SAssemble[1, xOut["q+"[xKeys]]]]
+							];
+						xOut["S"] = Linearize @ ((SAssemble @@ xA) ~SDot~ xOut["C"])
+						]	
+					]
 				];
 			If[xOut["Debug Mode"] === "On",
-				Print[StringForm["``:``:S:OK",
+				Print[StringForm["``:``:C:OK",
 					NumberForm[Round[AbsoluteTime[] - xTimer, 0.01], {5, 2}],
 					xOut["System Label"]]]
 				];	

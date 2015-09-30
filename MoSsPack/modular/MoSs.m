@@ -260,17 +260,19 @@ MoSs[xSystem_, xSubSystems_List:{}]:=
 					xOut["C"] = OrthogonalComplement[xOut["B"], ToString @ xOut["System Label"]]
 					]
 				];							
-			xA = {};
-			If[KeyExistsQ[xOut[#], "S"], AppendTo[xA, xOut[#]["S"]]]& /@ xIn["Subsystems Labels"];
-			If[xA === {},
-				xOut["S"] = xOut["C"],
-				If[Not @ (xOut["q+"[xKeys]] === {}),
-					AppendTo[xA, SAssemble[1, xOut["q+"[xKeys]]]]
+			If[Not @ (xOut["S?"] === "No"),		
+				xA = {};
+				If[KeyExistsQ[xOut[#], "S"], AppendTo[xA, xOut[#]["S"]]]& /@ xIn["Subsystems Labels"];
+				If[xA === {},
+					xOut["S"] = xOut["C"],
+					If[Not @ (xOut["q+"[xKeys]] === {}),
+						AppendTo[xA, SAssemble[1, xOut["q+"[xKeys]]]]
+						];
+					xOut["S"] = (SAssemble @@ xA) ~SDot~ xOut["C"]
 					];
-				xOut["S"] = (SAssemble @@ xA) ~SDot~ xOut["C"]
 				];
 			If[xOut["Debug Mode"] === "On",
-				Print[StringForm["``:``:S:OK",
+				Print[StringForm["``:``:C:OK",
 					NumberForm[Round[AbsoluteTime[] - xTimer, 0.01], {5, 2}],
 					xOut["System Label"]]]
 				];
