@@ -1,4 +1,4 @@
-ParametersEval[xSystem_Association, xPhysicalParameters_List, xExtraRules_List: {}] :=
+ParametersEval[xSystem_Association, xPhysicalParameters_, xExtraRules_: <||>] :=
 	Module[{xAuxiliarParameters,xInvariants,xVariables,xCoeffA,xVarA,xCoeffC,xVarC},
 		xAuxiliarParameters = {};
 		(
@@ -44,5 +44,5 @@ ParametersEval[xSystem_Association, xPhysicalParameters_List, xExtraRules_List: 
 					]
 				];
 		)& /@ xVarC;
-		Union[xPhysicalParameters, xAuxiliarParameters]
+		Association[xPhysicalParameters, xAuxiliarParameters]
 		]
