@@ -9,6 +9,7 @@ SetDirectory[RootDir];
 (*- formalisms -*)
 
 <<MoSsPack/formalisms/NewtonEuler.m
+<<MoSsPack/formalisms/NewtonEuler2D.m
 
 
 (*- modular -*)
