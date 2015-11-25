@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     89042,       2578]
-NotebookOptionsPosition[     88053,       2539]
-NotebookOutlinePosition[     88437,       2556]
-CellTagsIndexPosition[     88394,       2553]
+NotebookDataLength[     85335,       2439]
+NotebookOptionsPosition[     84344,       2400]
+NotebookOutlinePosition[     84728,       2417]
+CellTagsIndexPosition[     84685,       2414]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -95,107 +95,53 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"SyRR", " ", "@", " ", 
     RowBox[{"\"\<*q\>\"", "[", "\"\<0\>\"", "]"}]}], " ", "=", " ", 
-   RowBox[{
-    RowBox[{"(", 
-     RowBox[{"Join", " ", "@@", " ", 
-      RowBox[{"{", "\n", "\t", 
+   RowBox[{"Union", " ", "@@", " ", 
+    RowBox[{"{", "\n", "\t", 
+     RowBox[{
+      RowBox[{
        RowBox[{
+        RowBox[{"SyRR", "[", "1", "]"}], "[", "\"\<Nodes\>\"", "]"}], "[", 
+       "1", "]"}], ",", "\n", "\t", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"SyRR", "[", "2", "]"}], "[", "\"\<Nodes\>\"", "]"}], "[", 
+         "1", "]"}], ")"}], " ", "-", " ", 
+       RowBox[{"(", 
         RowBox[{
          RowBox[{
           RowBox[{"SyRR", "[", "1", "]"}], "[", "\"\<Nodes\>\"", "]"}], "[", 
-         "1", "]"}], ",", "\n", "\t", 
+         "2", "]"}], ")"}]}]}], "\n", "\t", "}"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SyRR", " ", "@", " ", 
+    RowBox[{"\"\<*q\>\"", "[", "\"\<1\>\"", "]"}]}], " ", "=", " ", 
+   RowBox[{"{", "\n", "\t", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["\[Theta]", "1"], "'"}], "[", "t", "]"}], " ", "-", " ", 
+      
+      RowBox[{
+       SubscriptBox["\[Omega]", 
+        RowBox[{"1", ",", "\"\<z\>\""}]], "[", "t", "]"}]}], ",", " ", "\n", 
+     "\t", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["\[Theta]", "2"], "'"}], "[", "t", "]"}], " ", "-", " ", 
+      
+      RowBox[{"(", 
+       RowBox[{
         RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["a", "_"], "1"], " ", 
-            RowBox[{"Cos", "[", 
-             RowBox[{
-              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "]"}]}], ",", 
-           " ", 
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["a", "_"], "1"], " ", 
-            RowBox[{"Sin", "[", 
-             RowBox[{
-              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "]"}]}]}], 
-          "}"}], " ", "-", " ", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"SyRR", "[", "2", "]"}], "[", "\"\<Nodes\>\"", "]"}], "[",
-            "1", "]"}], ")"}]}], ",", "\n", "\t", 
+         SubscriptBox["\[Omega]", 
+          RowBox[{"2", ",", "\"\<z\>\""}]], "[", "t", "]"}], " ", "-", " ", 
         RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["a", "_"], "1"], " ", 
-            RowBox[{"Cos", "[", 
-             RowBox[{
-              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "]"}]}], ",", 
-           " ", 
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["a", "_"], "1"], " ", 
-            RowBox[{"Sin", "[", 
-             RowBox[{
-              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "]"}]}]}], 
-          "}"}], " ", "-", " ", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"SyRR", "[", "1", "]"}], "[", "\"\<Nodes\>\"", "]"}], "[",
-            "2", "]"}], ")"}]}], ",", "\n", "\t", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["a", "_"], "1"], " ", 
-            RowBox[{"Cos", "[", 
-             RowBox[{
-              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "]"}]}], ",", 
-           " ", 
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["a", "_"], "1"], " ", 
-            RowBox[{"Sin", "[", 
-             RowBox[{
-              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "]"}]}]}], 
-          "}"}], " ", "+", " ", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["a", "_"], "2"], " ", 
-            RowBox[{"Cos", "[", 
-             RowBox[{
-              RowBox[{
-               SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-              RowBox[{
-               SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}], "]"}]}], ",",
-            " ", 
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["a", "_"], "2"], " ", 
-            RowBox[{"Sin", "[", 
-             RowBox[{
-              RowBox[{
-               SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-              RowBox[{
-               SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}], "]"}]}]}], 
-          "}"}], " ", "-", " ", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"SyRR", "[", "2", "]"}], "[", "\"\<Nodes\>\"", "]"}], "[",
-            "2", "]"}], ")"}]}]}], "\n", "\t", "}"}]}], ")"}], 
-    "\[LeftDoubleBracket]", 
-    RowBox[{"{", 
-     RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "7"}], "}"}], 
-    "\[RightDoubleBracket]"}]}], ";"}], "\n", 
+         SubscriptBox["\[Omega]", 
+          RowBox[{"1", ",", "\"\<z\>\""}]], "[", "t", "]"}]}], ")"}]}]}], 
+    "\n", "\t", "}"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"SyRR", " ", "@", " ", "\"\<Replacement Rules\>\""}], " ", "=", 
@@ -329,7 +275,7 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{
        RowBox[{
-        SubscriptBox["u", "1"], "[", "t", "]"}], ",", 
+        SubscriptBox["u", "1"], "[", "t", "]"}], ",", " ", 
        RowBox[{
         SubscriptBox["u", "2"], "[", "t", "]"}]}], "}"}], ",", " ", 
      RowBox[{"{", 
@@ -371,15 +317,35 @@ Cell[BoxData[{
        ")"}]}], "&"}], ",", " ", 
     RowBox[{"SyRR", " ", "@", " ", "\"\<S\>\""}]}], "\[RightAngleBracket]"}], 
   " ", "//", " ", "SMatrixForm"}]}], "Code",
- CellChangeTimes->CompressedData["
-1:eJwdxV0oAwEAB/Ajo5Ynaa0p3NvyEaV42LDV5EWjy0dRlw21tChlpCEf3YMw
-XpQ9eFhKe1DLyri4tKmhLlak9nQeyKyuuXO+Eu5/D79+pHucGsknCMKowiId
-lqSWrH1sclDGuZQpT1avN4e1d1xUDRb4Ze1efWUDPrtPOXCoyNWBby6GtJmQ
-l8JURaIPTzuNPvxCk3N48yi4i8szvDZ7l1QUdZvlR/euTp7W6nHE9F2Gi9Pr
-3djq3ffjw5h/EZ/IAQbn+plVPM9F17DzLXKANzxXUfzF9Rzj66VGFj+elybx
-TEy6xJ+GpzS20XXPWGElEbt5zyteaRv+xYUlBX9YzOw1faibbzkLtgaa2/FA
-lO/EE0K1T9eatW8p4Sns2BZmsdj1sIDjo8E4NnBVCfwPVJnVKQ==
-  "]],
+ CellChangeTimes->{{3.656882069292838*^9, 3.6568820750143347`*^9}, {
+   3.656882184838127*^9, 3.6568821892861557`*^9}, {3.656882530574416*^9, 
+   3.656882532150131*^9}, {3.6568825850012617`*^9, 3.6568827265575867`*^9}, {
+   3.6568827870321817`*^9, 3.6568827871182632`*^9}, {3.6568828353948393`*^9, 
+   3.6568828780975733`*^9}, {3.6568831207595787`*^9, 3.656883185042836*^9}, {
+   3.65688349283503*^9, 3.6568834944347067`*^9}, {3.6568882382448397`*^9, 
+   3.6568883678822327`*^9}, {3.656888401429337*^9, 3.6568885438157578`*^9}, {
+   3.656888996464117*^9, 3.656889317419462*^9}, {3.6568893638974257`*^9, 
+   3.6568893964985027`*^9}, {3.656889444198601*^9, 3.656889453617004*^9}, {
+   3.6568897495298223`*^9, 3.656889758325264*^9}, {3.656889802679562*^9, 
+   3.65688980970359*^9}, {3.656889912649035*^9, 3.656889935584897*^9}, {
+   3.656890071190304*^9, 3.656890177480255*^9}, {3.656890231585322*^9, 
+   3.656890251275071*^9}, {3.6568903551334887`*^9, 3.6568903601272*^9}, {
+   3.656890813247306*^9, 3.656890845963398*^9}, {3.6568909379237347`*^9, 
+   3.656891006428144*^9}, {3.656919985371148*^9, 3.6569199973112288`*^9}, {
+   3.656920047018709*^9, 3.656920079041129*^9}, {3.656920596825532*^9, 
+   3.656920601335704*^9}, 3.657467765547607*^9, {3.657467805434517*^9, 
+   3.6574678499606256`*^9}, {3.657468409512541*^9, 3.657468414426834*^9}, {
+   3.657468725004675*^9, 3.6574687345014267`*^9}, 3.657468894918939*^9, {
+   3.6574689747112513`*^9, 3.65746898588614*^9}, {3.657469462923582*^9, 
+   3.6574694776281967`*^9}, 3.657469543398809*^9, {3.657469612306037*^9, 
+   3.65746961288905*^9}, {3.657469791662498*^9, 3.657469802013926*^9}, 
+   3.65747012292955*^9, {3.657470233521294*^9, 3.6574702482524776`*^9}, {
+   3.657470297927226*^9, 3.6574703091776953`*^9}, {3.657470364187286*^9, 
+   3.6574703765846033`*^9}, {3.657470529864358*^9, 3.65747053527435*^9}, 
+   3.657470574564493*^9, 3.6574706511246357`*^9, {3.657470755926312*^9, 
+   3.657470761828102*^9}, {3.657472761944216*^9, 3.657472816537182*^9}, {
+   3.657474940017157*^9, 3.657475028481668*^9}, {3.657475064041501*^9, 
+   3.657475087999013*^9}, {3.657475123343677*^9, 3.657475197626664*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -390,39 +356,6 @@ Cell[BoxData[
         OverscriptBox["\[Theta]", "\<\".\"\>"], "1"],
        HoldForm], 
       RowBox[{
-       RowBox[{
-        RowBox[{"-", 
-         OverscriptBox["g", "_"]}], " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{
-           SubscriptBox["c", 
-            RowBox[{
-             SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
-           SubscriptBox[
-            OverscriptBox["a", "_"], "1"], " ", 
-           RowBox[{"(", 
-            RowBox[{
-             SubscriptBox[
-              OverscriptBox["m", "_"], "2"], "+", 
-             RowBox[{
-              SubscriptBox[
-               OverscriptBox["m", "_"], "1"], " ", 
-              SubscriptBox[
-               OverscriptBox["\[Gamma]", "_"], "1"]}]}], ")"}]}], "+", 
-          RowBox[{
-           SubscriptBox["c", 
-            RowBox[{
-             RowBox[{
-              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-             RowBox[{
-              SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
-           SubscriptBox[
-            OverscriptBox["a", "_"], "2"], " ", 
-           SubscriptBox[
-            OverscriptBox["m", "_"], "2"], " ", 
-           SubscriptBox[
-            OverscriptBox["\[Gamma]", "_"], "2"]}]}], ")"}]}], "+", 
        RowBox[{
         SubscriptBox["u", "1"], "[", "t", "]"}], "+", 
        RowBox[{
@@ -449,68 +382,68 @@ Cell[BoxData[
          OverscriptBox["m", "_"], "1"], " ", 
         SubscriptBox[
          OverscriptBox["\[Gamma]", "_"], "1"], " ", 
-        RowBox[{
-         SubscriptBox[
-          OverscriptBox["v", "\<\".\"\>"], 
-          RowBox[{"1", ",", "\<\"y\"\>"}]], "[", "t", "]"}]}], "+", 
-       RowBox[{
-        SubscriptBox["s", 
+        RowBox[{"(", 
          RowBox[{
-          SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
-        SubscriptBox[
-         OverscriptBox["a", "_"], "1"], " ", 
+          OverscriptBox["g", "_"], "+", 
+          RowBox[{
+           SubscriptBox[
+            OverscriptBox["v", "\<\".\"\>"], 
+            RowBox[{"1", ",", "\<\"y\"\>"}]], "[", "t", "]"}]}], ")"}]}], "+", 
+       RowBox[{
         SubscriptBox[
          OverscriptBox["m", "_"], "2"], " ", 
-        RowBox[{
-         SubscriptBox[
-          OverscriptBox["v", "\<\".\"\>"], 
-          RowBox[{"2", ",", "\<\"x\"\>"}]], "[", "t", "]"}]}], "+", 
-       RowBox[{
-        SubscriptBox["s", 
+        RowBox[{"(", 
          RowBox[{
           RowBox[{
-           SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
+           SubscriptBox["s", 
+            RowBox[{
+             SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
+           SubscriptBox[
+            OverscriptBox["a", "_"], "1"]}], "+", 
           RowBox[{
-           SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
-        SubscriptBox[
-         OverscriptBox["a", "_"], "2"], " ", 
-        SubscriptBox[
-         OverscriptBox["m", "_"], "2"], " ", 
-        SubscriptBox[
-         OverscriptBox["\[Gamma]", "_"], "2"], " ", 
+           SubscriptBox["s", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
+             RowBox[{
+              SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
+           SubscriptBox[
+            OverscriptBox["a", "_"], "2"], " ", 
+           SubscriptBox[
+            OverscriptBox["\[Gamma]", "_"], "2"]}]}], ")"}], " ", 
         RowBox[{
          SubscriptBox[
           OverscriptBox["v", "\<\".\"\>"], 
           RowBox[{"2", ",", "\<\"x\"\>"}]], "[", "t", "]"}]}], "-", 
        RowBox[{
-        SubscriptBox["c", 
-         RowBox[{
-          SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
-        SubscriptBox[
-         OverscriptBox["a", "_"], "1"], " ", 
         SubscriptBox[
          OverscriptBox["m", "_"], "2"], " ", 
-        RowBox[{
-         SubscriptBox[
-          OverscriptBox["v", "\<\".\"\>"], 
-          RowBox[{"2", ",", "\<\"y\"\>"}]], "[", "t", "]"}]}], "-", 
-       RowBox[{
-        SubscriptBox["c", 
+        RowBox[{"(", 
          RowBox[{
           RowBox[{
-           SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
+           SubscriptBox["c", 
+            RowBox[{
+             SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
+           SubscriptBox[
+            OverscriptBox["a", "_"], "1"]}], "+", 
           RowBox[{
-           SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
-        SubscriptBox[
-         OverscriptBox["a", "_"], "2"], " ", 
-        SubscriptBox[
-         OverscriptBox["m", "_"], "2"], " ", 
-        SubscriptBox[
-         OverscriptBox["\[Gamma]", "_"], "2"], " ", 
-        RowBox[{
-         SubscriptBox[
-          OverscriptBox["v", "\<\".\"\>"], 
-          RowBox[{"2", ",", "\<\"y\"\>"}]], "[", "t", "]"}]}], "-", 
+           SubscriptBox["c", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
+             RowBox[{
+              SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
+           SubscriptBox[
+            OverscriptBox["a", "_"], "2"], " ", 
+           SubscriptBox[
+            OverscriptBox["\[Gamma]", "_"], "2"]}]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          OverscriptBox["g", "_"], "+", 
+          RowBox[{
+           SubscriptBox[
+            OverscriptBox["v", "\<\".\"\>"], 
+            RowBox[{"2", ",", "\<\"y\"\>"}]], "[", "t", "]"}]}], ")"}]}], "-", 
        RowBox[{
         SubscriptBox[
          OverscriptBox["\[CapitalIota]", "_"], "1"], " ", 
@@ -622,7 +555,19 @@ Cell[BoxData[
    3.656890252599059*^9}, 3.656890360984099*^9, 3.656890886459347*^9, {
    3.6568909777462273`*^9, 3.656891007026403*^9}, 3.656891112865898*^9, 
    3.656920085477656*^9, {3.656920598077808*^9, 3.656920601921597*^9}, 
-   3.65693705506085*^9}],
+   3.65693705506085*^9, 3.6574677709679413`*^9, 3.6574678091729527`*^9, 
+   3.657467853381008*^9, 3.6574682969562607`*^9, {3.657468410449532*^9, 
+   3.657468415293428*^9}, {3.6574687312260017`*^9, 3.6574687350724907`*^9}, 
+   3.657468895634028*^9, 3.6574689865935497`*^9, {3.65746946887821*^9, 
+   3.657469478398494*^9}, 3.657469544722376*^9, 3.657469614191382*^9, 
+   3.6574698032329187`*^9, 3.657470170664034*^9, {3.657470212358122*^9, 
+   3.657470239931858*^9}, {3.65747028053515*^9, 3.657470309922249*^9}, 
+   3.657470377374995*^9, {3.6574705306061277`*^9, 3.6574705360405188`*^9}, 
+   3.65747057519263*^9, 3.657470651831039*^9, {3.657470756719975*^9, 
+   3.657470762448759*^9}, {3.6574727788641853`*^9, 3.657472817447632*^9}, 
+   3.6574750343060293`*^9, {3.657475065326758*^9, 3.657475092249951*^9}, {
+   3.6574751241851177`*^9, 3.657475134741872*^9}, {3.657475167199093*^9, 
+   3.657475198296172*^9}, 3.657475556849757*^9}],
 
 Cell[BoxData[
  TagBox[
@@ -755,7 +700,133 @@ Cell[BoxData[
        TagBox[
         SubscriptBox[
          OverscriptBox["\[Theta]", "\<\".\"\>"], "2"],
-        HoldForm], "0", "1"}
+        HoldForm], "0", "1"},
+      {
+       TagBox[
+        SubscriptBox[
+         OverscriptBox["p", "\<\".\"\>"], 
+         RowBox[{"1", ",", "1", ",", "\<\"x\"\>"}]],
+        HoldForm], "0", "0"},
+      {
+       TagBox[
+        SubscriptBox[
+         OverscriptBox["p", "\<\".\"\>"], 
+         RowBox[{"1", ",", "1", ",", "\<\"y\"\>"}]],
+        HoldForm], "0", "0"},
+      {
+       TagBox[
+        SubscriptBox[
+         OverscriptBox["p", "\<\".\"\>"], 
+         RowBox[{"1", ",", "2", ",", "\<\"x\"\>"}]],
+        HoldForm], 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["s", 
+          RowBox[{
+           SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]]}], " ", 
+        SubscriptBox[
+         OverscriptBox["a", "_"], "1"]}], "0"},
+      {
+       TagBox[
+        SubscriptBox[
+         OverscriptBox["p", "\<\".\"\>"], 
+         RowBox[{"1", ",", "2", ",", "\<\"y\"\>"}]],
+        HoldForm], 
+       RowBox[{
+        SubscriptBox["c", 
+         RowBox[{
+          SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
+        SubscriptBox[
+         OverscriptBox["a", "_"], "1"]}], "0"},
+      {
+       TagBox[
+        SubscriptBox[
+         OverscriptBox["p", "\<\".\"\>"], 
+         RowBox[{"2", ",", "1", ",", "\<\"x\"\>"}]],
+        HoldForm], 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["s", 
+          RowBox[{
+           SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]]}], " ", 
+        SubscriptBox[
+         OverscriptBox["a", "_"], "1"]}], "0"},
+      {
+       TagBox[
+        SubscriptBox[
+         OverscriptBox["p", "\<\".\"\>"], 
+         RowBox[{"2", ",", "1", ",", "\<\"y\"\>"}]],
+        HoldForm], 
+       RowBox[{
+        SubscriptBox["c", 
+         RowBox[{
+          SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
+        SubscriptBox[
+         OverscriptBox["a", "_"], "1"]}], "0"},
+      {
+       TagBox[
+        SubscriptBox[
+         OverscriptBox["p", "\<\".\"\>"], 
+         RowBox[{"2", ",", "2", ",", "\<\"x\"\>"}]],
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", 
+          SubscriptBox["s", 
+           RowBox[{
+            SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]]}], " ", 
+         SubscriptBox[
+          OverscriptBox["a", "_"], "1"]}], "-", 
+        RowBox[{
+         SubscriptBox["s", 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
+           RowBox[{
+            SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
+         SubscriptBox[
+          OverscriptBox["a", "_"], "2"]}]}], 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["s", 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
+           RowBox[{
+            SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]]}], " ", 
+        SubscriptBox[
+         OverscriptBox["a", "_"], "2"]}]},
+      {
+       TagBox[
+        SubscriptBox[
+         OverscriptBox["p", "\<\".\"\>"], 
+         RowBox[{"2", ",", "2", ",", "\<\"y\"\>"}]],
+        HoldForm], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["c", 
+          RowBox[{
+           SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
+         SubscriptBox[
+          OverscriptBox["a", "_"], "1"]}], "+", 
+        RowBox[{
+         SubscriptBox["c", 
+          RowBox[{
+           RowBox[{
+            SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
+           RowBox[{
+            SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
+         SubscriptBox[
+          OverscriptBox["a", "_"], "2"]}]}], 
+       RowBox[{
+        SubscriptBox["c", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
+          RowBox[{
+           SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
+        SubscriptBox[
+         OverscriptBox["a", "_"], "2"]}]}
      },
      GridBoxAlignment->{
       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
@@ -783,7 +854,23 @@ Cell[BoxData[
        Subscript[
         Overscript[$CellContext`\[Theta], "."], 1], 
        Subscript[
-        Overscript[$CellContext`\[Theta], "."], 2]}, {
+        Overscript[$CellContext`\[Theta], "."], 2], 
+       Subscript[
+        Overscript[$CellContext`p, "."], 1, 1, "x"], 
+       Subscript[
+        Overscript[$CellContext`p, "."], 1, 1, "y"], 
+       Subscript[
+        Overscript[$CellContext`p, "."], 1, 2, "x"], 
+       Subscript[
+        Overscript[$CellContext`p, "."], 1, 2, "y"], 
+       Subscript[
+        Overscript[$CellContext`p, "."], 2, 1, "x"], 
+       Subscript[
+        Overscript[$CellContext`p, "."], 2, 1, "y"], 
+       Subscript[
+        Overscript[$CellContext`p, "."], 2, 2, "x"], 
+       Subscript[
+        Overscript[$CellContext`p, "."], 2, 2, "y"]}, {
        Subscript[
         Overscript[$CellContext`\[Theta], "."], 1], 
        Subscript[
@@ -800,7 +887,19 @@ Cell[BoxData[
    3.656890252599059*^9}, 3.656890360984099*^9, 3.656890886459347*^9, {
    3.6568909777462273`*^9, 3.656891007026403*^9}, 3.656891112865898*^9, 
    3.656920085477656*^9, {3.656920598077808*^9, 3.656920601921597*^9}, 
-   3.6569370551043787`*^9}]
+   3.65693705506085*^9, 3.6574677709679413`*^9, 3.6574678091729527`*^9, 
+   3.657467853381008*^9, 3.6574682969562607`*^9, {3.657468410449532*^9, 
+   3.657468415293428*^9}, {3.6574687312260017`*^9, 3.6574687350724907`*^9}, 
+   3.657468895634028*^9, 3.6574689865935497`*^9, {3.65746946887821*^9, 
+   3.657469478398494*^9}, 3.657469544722376*^9, 3.657469614191382*^9, 
+   3.6574698032329187`*^9, 3.657470170664034*^9, {3.657470212358122*^9, 
+   3.657470239931858*^9}, {3.65747028053515*^9, 3.657470309922249*^9}, 
+   3.657470377374995*^9, {3.6574705306061277`*^9, 3.6574705360405188`*^9}, 
+   3.65747057519263*^9, 3.657470651831039*^9, {3.657470756719975*^9, 
+   3.657470762448759*^9}, {3.6574727788641853`*^9, 3.657472817447632*^9}, 
+   3.6574750343060293`*^9, {3.657475065326758*^9, 3.657475092249951*^9}, {
+   3.6574751241851177`*^9, 3.657475134741872*^9}, {3.657475167199093*^9, 
+   3.657475198296172*^9}, 3.6574755569260893`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -908,39 +1007,6 @@ Cell[BoxData[
        HoldForm], 
       RowBox[{
        RowBox[{
-        RowBox[{"-", 
-         OverscriptBox["g", "_"]}], " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{
-           SubscriptBox["c", 
-            RowBox[{
-             SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
-           SubscriptBox[
-            OverscriptBox["a", "_"], "1"], " ", 
-           RowBox[{"(", 
-            RowBox[{
-             SubscriptBox[
-              OverscriptBox["m", "_"], "2"], "+", 
-             RowBox[{
-              SubscriptBox[
-               OverscriptBox["m", "_"], "1"], " ", 
-              SubscriptBox[
-               OverscriptBox["\[Gamma]", "_"], "1"]}]}], ")"}]}], "+", 
-          RowBox[{
-           SubscriptBox["c", 
-            RowBox[{
-             RowBox[{
-              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-             RowBox[{
-              SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
-           SubscriptBox[
-            OverscriptBox["a", "_"], "2"], " ", 
-           SubscriptBox[
-            OverscriptBox["m", "_"], "2"], " ", 
-           SubscriptBox[
-            OverscriptBox["\[Gamma]", "_"], "2"]}]}], ")"}]}], "+", 
-       RowBox[{
         SubscriptBox["u", "1"], "[", "t", "]"}], "-", 
        RowBox[{
         SubscriptBox[
@@ -961,11 +1027,11 @@ Cell[BoxData[
          OverscriptBox["\[Gamma]", "_"], "1"], " ", 
         RowBox[{"(", 
          RowBox[{
+          OverscriptBox["g", "_"], "-", 
           RowBox[{
-           RowBox[{"-", 
-            SubscriptBox["s", 
-             RowBox[{
-              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]]}], " ", 
+           SubscriptBox["s", 
+            RowBox[{
+             SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
            SubscriptBox[
             OverscriptBox["a", "_"], "1"], " ", 
            SubscriptBox[
@@ -1039,104 +1105,16 @@ Cell[BoxData[
             OverscriptBox["\[Theta]", "\<\"..\"\>"], "2"], "[", "t", "]"}]}], 
          ")"}]}], "-", 
        RowBox[{
-        SubscriptBox["c", 
-         RowBox[{
-          SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
-        SubscriptBox[
-         OverscriptBox["a", "_"], "1"], " ", 
         SubscriptBox[
          OverscriptBox["m", "_"], "2"], " ", 
         RowBox[{"(", 
          RowBox[{
           RowBox[{
-           RowBox[{"-", 
-            SubscriptBox["s", 
-             RowBox[{
-              RowBox[{
-               SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-              RowBox[{
-               SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]]}], " ", 
+           SubscriptBox["c", 
+            RowBox[{
+             SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
            SubscriptBox[
-            OverscriptBox["a", "_"], "2"], " ", 
-           SubscriptBox[
-            OverscriptBox["\[Gamma]", "_"], "2"], " ", 
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["\[Theta]", "\<\".\"\>"], "2"], "[", "t", "]"}], 
-           " ", 
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{
-              SubscriptBox[
-               OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", "]"}], 
-             "+", 
-             RowBox[{
-              SubscriptBox[
-               OverscriptBox["\[Theta]", "\<\".\"\>"], "2"], "[", "t", 
-              "]"}]}], ")"}]}], "+", 
-          RowBox[{
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", "]"}], 
-           " ", 
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"-", 
-               SubscriptBox["s", 
-                RowBox[{
-                 SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]]}], " ", 
-              SubscriptBox[
-               OverscriptBox["a", "_"], "1"], " ", 
-              RowBox[{
-               SubscriptBox[
-                OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", 
-               "]"}]}], "-", 
-             RowBox[{
-              SubscriptBox["s", 
-               RowBox[{
-                RowBox[{
-                 SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-                RowBox[{
-                 SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
-              SubscriptBox[
-               OverscriptBox["a", "_"], "2"], " ", 
-              SubscriptBox[
-               OverscriptBox["\[Gamma]", "_"], "2"], " ", 
-              RowBox[{"(", 
-               RowBox[{
-                RowBox[{
-                 SubscriptBox[
-                  OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", 
-                 "]"}], "+", 
-                RowBox[{
-                 SubscriptBox[
-                  OverscriptBox["\[Theta]", "\<\".\"\>"], "2"], "[", "t", 
-                 "]"}]}], ")"}]}]}], ")"}]}], "+", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{
-              SubscriptBox["c", 
-               RowBox[{
-                SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
-              SubscriptBox[
-               OverscriptBox["a", "_"], "1"]}], "+", 
-             RowBox[{
-              SubscriptBox["c", 
-               RowBox[{
-                RowBox[{
-                 SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-                RowBox[{
-                 SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
-              SubscriptBox[
-               OverscriptBox["a", "_"], "2"], " ", 
-              SubscriptBox[
-               OverscriptBox["\[Gamma]", "_"], "2"]}]}], ")"}], " ", 
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["\[Theta]", "\<\"..\"\>"], "1"], "[", "t", "]"}]}],
-           "+", 
+            OverscriptBox["a", "_"], "1"]}], "+", 
           RowBox[{
            SubscriptBox["c", 
             RowBox[{
@@ -1147,230 +1125,10 @@ Cell[BoxData[
            SubscriptBox[
             OverscriptBox["a", "_"], "2"], " ", 
            SubscriptBox[
-            OverscriptBox["\[Gamma]", "_"], "2"], " ", 
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["\[Theta]", "\<\"..\"\>"], "2"], "[", "t", 
-            "]"}]}]}], ")"}]}], "-", 
-       RowBox[{
-        SubscriptBox["c", 
-         RowBox[{
-          RowBox[{
-           SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-          RowBox[{
-           SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
-        SubscriptBox[
-         OverscriptBox["a", "_"], "2"], " ", 
-        SubscriptBox[
-         OverscriptBox["m", "_"], "2"], " ", 
-        SubscriptBox[
-         OverscriptBox["\[Gamma]", "_"], "2"], " ", 
+            OverscriptBox["\[Gamma]", "_"], "2"]}]}], ")"}], " ", 
         RowBox[{"(", 
          RowBox[{
-          RowBox[{
-           RowBox[{"-", 
-            SubscriptBox["s", 
-             RowBox[{
-              RowBox[{
-               SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-              RowBox[{
-               SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]]}], " ", 
-           SubscriptBox[
-            OverscriptBox["a", "_"], "2"], " ", 
-           SubscriptBox[
-            OverscriptBox["\[Gamma]", "_"], "2"], " ", 
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["\[Theta]", "\<\".\"\>"], "2"], "[", "t", "]"}], 
-           " ", 
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{
-              SubscriptBox[
-               OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", "]"}], 
-             "+", 
-             RowBox[{
-              SubscriptBox[
-               OverscriptBox["\[Theta]", "\<\".\"\>"], "2"], "[", "t", 
-              "]"}]}], ")"}]}], "+", 
-          RowBox[{
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", "]"}], 
-           " ", 
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"-", 
-               SubscriptBox["s", 
-                RowBox[{
-                 SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]]}], " ", 
-              SubscriptBox[
-               OverscriptBox["a", "_"], "1"], " ", 
-              RowBox[{
-               SubscriptBox[
-                OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", 
-               "]"}]}], "-", 
-             RowBox[{
-              SubscriptBox["s", 
-               RowBox[{
-                RowBox[{
-                 SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-                RowBox[{
-                 SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
-              SubscriptBox[
-               OverscriptBox["a", "_"], "2"], " ", 
-              SubscriptBox[
-               OverscriptBox["\[Gamma]", "_"], "2"], " ", 
-              RowBox[{"(", 
-               RowBox[{
-                RowBox[{
-                 SubscriptBox[
-                  OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", 
-                 "]"}], "+", 
-                RowBox[{
-                 SubscriptBox[
-                  OverscriptBox["\[Theta]", "\<\".\"\>"], "2"], "[", "t", 
-                 "]"}]}], ")"}]}]}], ")"}]}], "+", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{
-              SubscriptBox["c", 
-               RowBox[{
-                SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
-              SubscriptBox[
-               OverscriptBox["a", "_"], "1"]}], "+", 
-             RowBox[{
-              SubscriptBox["c", 
-               RowBox[{
-                RowBox[{
-                 SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-                RowBox[{
-                 SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
-              SubscriptBox[
-               OverscriptBox["a", "_"], "2"], " ", 
-              SubscriptBox[
-               OverscriptBox["\[Gamma]", "_"], "2"]}]}], ")"}], " ", 
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["\[Theta]", "\<\"..\"\>"], "1"], "[", "t", "]"}]}],
-           "+", 
-          RowBox[{
-           SubscriptBox["c", 
-            RowBox[{
-             RowBox[{
-              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-             RowBox[{
-              SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
-           SubscriptBox[
-            OverscriptBox["a", "_"], "2"], " ", 
-           SubscriptBox[
-            OverscriptBox["\[Gamma]", "_"], "2"], " ", 
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["\[Theta]", "\<\"..\"\>"], "2"], "[", "t", 
-            "]"}]}]}], ")"}]}], "+", 
-       RowBox[{
-        SubscriptBox["s", 
-         RowBox[{
-          SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
-        SubscriptBox[
-         OverscriptBox["a", "_"], "1"], " ", 
-        SubscriptBox[
-         OverscriptBox["m", "_"], "2"], " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"-", 
-            SubscriptBox["c", 
-             RowBox[{
-              RowBox[{
-               SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-              RowBox[{
-               SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]]}], " ", 
-           SubscriptBox[
-            OverscriptBox["a", "_"], "2"], " ", 
-           SubscriptBox[
-            OverscriptBox["\[Gamma]", "_"], "2"], " ", 
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["\[Theta]", "\<\".\"\>"], "2"], "[", "t", "]"}], 
-           " ", 
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{
-              SubscriptBox[
-               OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", "]"}], 
-             "+", 
-             RowBox[{
-              SubscriptBox[
-               OverscriptBox["\[Theta]", "\<\".\"\>"], "2"], "[", "t", 
-              "]"}]}], ")"}]}], "+", 
-          RowBox[{
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", "]"}], 
-           " ", 
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"-", 
-               SubscriptBox["c", 
-                RowBox[{
-                 SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]]}], " ", 
-              SubscriptBox[
-               OverscriptBox["a", "_"], "1"], " ", 
-              RowBox[{
-               SubscriptBox[
-                OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", 
-               "]"}]}], "-", 
-             RowBox[{
-              SubscriptBox["c", 
-               RowBox[{
-                RowBox[{
-                 SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-                RowBox[{
-                 SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
-              SubscriptBox[
-               OverscriptBox["a", "_"], "2"], " ", 
-              SubscriptBox[
-               OverscriptBox["\[Gamma]", "_"], "2"], " ", 
-              RowBox[{"(", 
-               RowBox[{
-                RowBox[{
-                 SubscriptBox[
-                  OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", 
-                 "]"}], "+", 
-                RowBox[{
-                 SubscriptBox[
-                  OverscriptBox["\[Theta]", "\<\".\"\>"], "2"], "[", "t", 
-                 "]"}]}], ")"}]}]}], ")"}]}], "+", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"-", 
-               SubscriptBox["s", 
-                RowBox[{
-                 SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]]}], " ", 
-              SubscriptBox[
-               OverscriptBox["a", "_"], "1"]}], "-", 
-             RowBox[{
-              SubscriptBox["s", 
-               RowBox[{
-                RowBox[{
-                 SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-                RowBox[{
-                 SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
-              SubscriptBox[
-               OverscriptBox["a", "_"], "2"], " ", 
-              SubscriptBox[
-               OverscriptBox["\[Gamma]", "_"], "2"]}]}], ")"}], " ", 
-           RowBox[{
-            SubscriptBox[
-             OverscriptBox["\[Theta]", "\<\"..\"\>"], "1"], "[", "t", "]"}]}],
-           "-", 
+          OverscriptBox["g", "_"], "-", 
           RowBox[{
            SubscriptBox["s", 
             RowBox[{
@@ -1384,21 +1142,118 @@ Cell[BoxData[
             OverscriptBox["\[Gamma]", "_"], "2"], " ", 
            RowBox[{
             SubscriptBox[
+             OverscriptBox["\[Theta]", "\<\".\"\>"], "2"], "[", "t", "]"}], 
+           " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox[
+               OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", "]"}], 
+             "+", 
+             RowBox[{
+              SubscriptBox[
+               OverscriptBox["\[Theta]", "\<\".\"\>"], "2"], "[", "t", 
+              "]"}]}], ")"}]}], "+", 
+          RowBox[{
+           RowBox[{
+            SubscriptBox[
+             OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", "]"}], 
+           " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", 
+               SubscriptBox["s", 
+                RowBox[{
+                 SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]]}], " ", 
+              SubscriptBox[
+               OverscriptBox["a", "_"], "1"], " ", 
+              RowBox[{
+               SubscriptBox[
+                OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", 
+               "]"}]}], "-", 
+             RowBox[{
+              SubscriptBox["s", 
+               RowBox[{
+                RowBox[{
+                 SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
+                RowBox[{
+                 SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
+              SubscriptBox[
+               OverscriptBox["a", "_"], "2"], " ", 
+              SubscriptBox[
+               OverscriptBox["\[Gamma]", "_"], "2"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 SubscriptBox[
+                  OverscriptBox["\[Theta]", "\<\".\"\>"], "1"], "[", "t", 
+                 "]"}], "+", 
+                RowBox[{
+                 SubscriptBox[
+                  OverscriptBox["\[Theta]", "\<\".\"\>"], "2"], "[", "t", 
+                 "]"}]}], ")"}]}]}], ")"}]}], "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["c", 
+               RowBox[{
+                SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
+              SubscriptBox[
+               OverscriptBox["a", "_"], "1"]}], "+", 
+             RowBox[{
+              SubscriptBox["c", 
+               RowBox[{
+                RowBox[{
+                 SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
+                RowBox[{
+                 SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
+              SubscriptBox[
+               OverscriptBox["a", "_"], "2"], " ", 
+              SubscriptBox[
+               OverscriptBox["\[Gamma]", "_"], "2"]}]}], ")"}], " ", 
+           RowBox[{
+            SubscriptBox[
+             OverscriptBox["\[Theta]", "\<\"..\"\>"], "1"], "[", "t", "]"}]}],
+           "+", 
+          RowBox[{
+           SubscriptBox["c", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
+             RowBox[{
+              SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
+           SubscriptBox[
+            OverscriptBox["a", "_"], "2"], " ", 
+           SubscriptBox[
+            OverscriptBox["\[Gamma]", "_"], "2"], " ", 
+           RowBox[{
+            SubscriptBox[
              OverscriptBox["\[Theta]", "\<\"..\"\>"], "2"], "[", "t", 
             "]"}]}]}], ")"}]}], "+", 
        RowBox[{
-        SubscriptBox["s", 
-         RowBox[{
-          RowBox[{
-           SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
-          RowBox[{
-           SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
-        SubscriptBox[
-         OverscriptBox["a", "_"], "2"], " ", 
         SubscriptBox[
          OverscriptBox["m", "_"], "2"], " ", 
-        SubscriptBox[
-         OverscriptBox["\[Gamma]", "_"], "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["s", 
+            RowBox[{
+             SubscriptBox["\[Theta]", "1"], "[", "t", "]"}]], " ", 
+           SubscriptBox[
+            OverscriptBox["a", "_"], "1"]}], "+", 
+          RowBox[{
+           SubscriptBox["s", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["\[Theta]", "1"], "[", "t", "]"}], "+", 
+             RowBox[{
+              SubscriptBox["\[Theta]", "2"], "[", "t", "]"}]}]], " ", 
+           SubscriptBox[
+            OverscriptBox["a", "_"], "2"], " ", 
+           SubscriptBox[
+            OverscriptBox["\[Gamma]", "_"], "2"]}]}], ")"}], " ", 
         RowBox[{"(", 
          RowBox[{
           RowBox[{
@@ -1807,7 +1662,8 @@ Cell[BoxData[
    3.656920781136796*^9, 3.656920920708393*^9, 3.656920977854019*^9, 
    3.656921166661605*^9, {3.6569212471064253`*^9, 3.656921261973117*^9}, 
    3.656921318630887*^9, {3.6569370551486607`*^9, 3.656937069813546*^9}, {
-   3.656947395820858*^9, 3.65694742256402*^9}}],
+   3.656947395820858*^9, 3.65694742256402*^9}, 3.657470664083997*^9, 
+   3.657475100068861*^9, {3.6574755570260773`*^9, 3.65747556897484*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -1955,7 +1811,8 @@ Cell[BoxData[
    3.656920781136796*^9, 3.656920920708393*^9, 3.656920977854019*^9, 
    3.656921166661605*^9, {3.6569212471064253`*^9, 3.656921261973117*^9}, 
    3.656921318630887*^9, {3.6569370551486607`*^9, 3.656937069813546*^9}, {
-   3.656947395820858*^9, 3.6569474225776653`*^9}}]
+   3.656947395820858*^9, 3.65694742256402*^9}, 3.657470664083997*^9, 
+   3.657475100068861*^9, {3.6574755570260773`*^9, 3.657475568990288*^9}}]
 }, Open  ]]
 }, Open  ]],
 
@@ -2365,7 +2222,9 @@ Cell[BoxData[
        Subscript[
         Overscript[$CellContext`\[Theta], "."], 2]}, None}, TableAlignments -> 
     Left]]]], "Output",
- CellChangeTimes->{3.656948081030504*^9}],
+ CellChangeTimes->{
+  3.656948081030504*^9, 3.657470678978849*^9, {3.657475557633814*^9, 
+   3.657475572886169*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -2532,7 +2391,9 @@ Cell[BoxData[
        Subscript[
         Overscript[$CellContext`\[Theta], "."], 2]}}, TableAlignments -> 
     Automatic]]]], "Output",
- CellChangeTimes->{3.656948081035898*^9}]
+ CellChangeTimes->{
+  3.656948081030504*^9, 3.657470678978849*^9, {3.657475557633814*^9, 
+   3.6574755728964453`*^9}}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -2561,22 +2422,22 @@ Cell[861, 32, 99, 1, 80, "Section"],
 Cell[CellGroupData[{
 Cell[985, 37, 97, 1, 54, "Subsection"],
 Cell[CellGroupData[{
-Cell[1107, 42, 11764, 339, 424, "Code"],
-Cell[12874, 383, 8687, 241, 96, "Output"],
-Cell[21564, 626, 6041, 176, 266, "Output"]
+Cell[1107, 42, 11480, 305, 466, "Code"],
+Cell[12590, 349, 8433, 220, 100, "Output"],
+Cell[21026, 571, 11371, 330, 522, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27642, 807, 3422, 91, 140, "Code"],
-Cell[31067, 900, 32744, 909, 112, "Output"],
-Cell[63814, 1811, 5197, 146, 130, "Output"]
+Cell[32434, 906, 3422, 91, 140, "Code"],
+Cell[35859, 999, 23998, 666, 112, "Output"],
+Cell[59860, 1667, 5290, 147, 130, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[69060, 1963, 97, 1, 54, "Subsection"],
+Cell[65199, 1820, 97, 1, 54, "Subsection"],
 Cell[CellGroupData[{
-Cell[69182, 1968, 6602, 193, 312, "Code"],
-Cell[75787, 2163, 6908, 204, 106, "Output"],
-Cell[82698, 2369, 5315, 165, 266, "Output"]
+Cell[65321, 1825, 6602, 193, 312, "Code"],
+Cell[71926, 2020, 6983, 206, 106, "Output"],
+Cell[78912, 2228, 5392, 167, 266, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

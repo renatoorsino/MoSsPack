@@ -77,7 +77,13 @@ NewtonEuler2D[xLabel_, xCoordinates_: "None",
 			xOut["q"["0"]] = Union @@ (
 				{Subscript[p, xLabel, #, "x"][t], Subscript[p, xLabel, #, "y"][t]} & /@ (Range @ xOut["Nodes"]["#"])
 				);
-			xOut["*c"["1"]] =  Union @@ ({
+			xOut["q"["1"]] = Union @@ {
+				xOut["q#"["1"]],
+				Union @@ (
+					{Subscript[p, xLabel, #, "x"]'[t], Subscript[p, xLabel, #, "y"]'[t]} & /@ (Range @ xOut["Nodes"]["#"])
+					)
+				};
+			xOut["*q"["1"]] =  Union @@ ({
 				- Subscript[p, xLabel, #, "x"]'[t] + Subscript[v, xLabel, "x"][t]  
 					+ Subscript[\[Omega], xLabel, "z"][t] (
 						+ xOut["Nodes"]["b"] (Subscript[p, xLabel, xOut["Nodes"]["X"], "x"][t] - Subscript[p, xLabel, xOut["Nodes"]["O"], "x"][t])
@@ -91,22 +97,7 @@ NewtonEuler2D[xLabel_, xCoordinates_: "None",
 						+ (Subscript[p, xLabel, #, "x"][t] - Subscript[p, xLabel, xOut["Nodes"]["O"], "x"][t])
 						)
 				} & /@ (Range @ xOut["Nodes"]["#"])
-				);	
-			xOut["_q"["1|0"]] = Union @@ ({
-				Subscript[p, xLabel, #, "x"]'[t] -> Subscript[v, xLabel, "x"][t]  
-					+ Subscript[\[Omega], xLabel, "z"][t] (
-						+ xOut["Nodes"]["b"] (Subscript[p, xLabel, xOut["Nodes"]["X"], "x"][t] - Subscript[p, xLabel, xOut["Nodes"]["O"], "x"][t])
-						+ xOut["Nodes"]["a"] (Subscript[p, xLabel, xOut["Nodes"]["X"], "y"][t] - Subscript[p, xLabel, xOut["Nodes"]["O"], "y"][t])
-						- (Subscript[p, xLabel, #, "y"][t] - Subscript[p, xLabel, xOut["Nodes"]["O"], "y"][t])
-						),
-				Subscript[p, xLabel, #, "y"]'[t] -> Subscript[v, xLabel, "y"][t]
-					+ Subscript[\[Omega], xLabel, "z"][t] (
-						- xOut["Nodes"]["a"] (Subscript[p, xLabel, xOut["Nodes"]["X"], "x"][t] - Subscript[p, xLabel, xOut["Nodes"]["O"], "x"][t])
-						+ xOut["Nodes"]["b"] (Subscript[p, xLabel, xOut["Nodes"]["X"], "y"][t] - Subscript[p, xLabel, xOut["Nodes"]["O"], "y"][t])
-						+ (Subscript[p, xLabel, #, "x"][t] - Subscript[p, xLabel, xOut["Nodes"]["O"], "x"][t])
-						)
-				} & /@ (Range @ xOut["Nodes"]["#"])
-				);	
+				);
 			];	
 
 		Module[{xg},
